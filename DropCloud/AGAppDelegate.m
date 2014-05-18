@@ -11,12 +11,17 @@
 #import "AGCloudCommunication.h"
 #import "AGCredentials.h"
 #import "NSAttributedString+Hyperlink.h"
+#import "AGLoadingStatusItemView.h"
 
 @interface AGAppDelegate ()
 
+#pragma mark General Properties
 @property (nonatomic, strong) AGCloudCommunication *cloud;
 @property (nonatomic, strong) NSStatusItem *statusItem;
-@property (nonatomic, strong) AGStatusItemView *statusItemView;
+@property (nonatomic, strong) AGLoadingStatusItemView *statusItemView;
+
+
+#pragma mark Main Window
 @property (weak) IBOutlet NSMenu *statusMenu;
 @property (weak) IBOutlet NSMenuItem *settingsMenuItem;
 @property (weak) IBOutlet NSMenuItem *aboutMenuItem;
@@ -32,10 +37,14 @@
 
 @property (weak) IBOutlet NSButton *saveButton;
 
+
+#pragma mark About Window
 @property (unsafe_unretained) IBOutlet NSWindow *aboutWindow;
 @property (weak) IBOutlet NSTextField *developedByLabel;
 @property (weak) IBOutlet NSTextField *aboutTextfield;
 
+
+#pragma mark Actions
 - (IBAction)settingsAction:(id)sender;
 - (IBAction)aboutAction:(id)sender;
 - (IBAction)quitAction:(id)sender;
@@ -62,7 +71,7 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
 
 - (void)awakeFromNib {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:STATUS_ITEM_VIEW_WIDTH];
-    self.statusItemView = [[AGStatusItemView alloc] initWithStatusItem:self.statusItem];
+    self.statusItemView = [[AGLoadingStatusItemView alloc] initWithStatusItem:self.statusItem];
     self.statusItemView.menu = self.statusMenu;
     self.statusItemView.image = [NSImage imageNamed:@"menubar_icon"];
     self.statusItemView.highlightImage = [NSImage imageNamed:@"menubar_icon_inverse"];
@@ -145,6 +154,8 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
     NSString *fileName = fileNames[0];
 
     [self.cloud uploadFile:fileName progress:^(float percentCompleted) {
+        [self.statusItemView setLoading:YES];
+        [self.statusItemView setProgress:percentCompleted];
     }           completion:^(NSString *remoteFilePath, NSError *uploadError) {
         if (!uploadError) {
             [self.cloud shareFile:remoteFilePath completion:^(NSString *url, NSError *shareError) {

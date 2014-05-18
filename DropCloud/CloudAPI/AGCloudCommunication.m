@@ -14,7 +14,7 @@
 
 @interface AGCloudCommunication ()
 
-@property (nonatomic, assign) void (^progressBlock)(float percentCompleted);
+@property (nonatomic, copy) void (^progressBlock)(float percentCompleted);
 
 @end
 

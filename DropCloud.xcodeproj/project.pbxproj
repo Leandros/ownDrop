@@ -22,6 +22,10 @@
 		5D97A10FE5E2EA54463FE038 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A4FD322B22A9B186B9D4 /* NSData+Base64.m */; };
 		5D97A11A073604D959E3F63A /* menubar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D97A1D0DE197E8866529E70 /* menubar_icon.png */; };
 		5D97A22E2F224567984A6A08 /* menubar_icon_inverse.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D97A8DEEBC6A7EA66FC4721 /* menubar_icon_inverse.png */; };
+		5D97A317B53CE30592C673DD /* AGLoadingStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AC8E88A78E90FF8FF6F9 /* AGLoadingStatusItemView.m */; };
+		5D97A4F52DA5543D781DDCE1 /* AGLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AC24E0582E5F63ADC05F /* AGLoadingView.m */; };
+		5D97A5707F5F3A285CB19361 /* menubar_icon_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D97A88DD39E72C969A16546 /* menubar_icon_empty@2x.png */; };
+		5D97A5CF74BE92BBF1448E62 /* menubar_icon_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D97AF6B692E231B194D35B4 /* menubar_icon_empty.png */; };
 		5D97A9DF30105BCF6634BF0C /* AGCloudCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A9625FE471806B1B9B51 /* AGCloudCommunication.m */; };
 		5D97ABAB702985BD5AC21D29 /* menubar_icon_inverse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D97A703F5E64D520D8E47A8 /* menubar_icon_inverse@2x.png */; };
 		5D97AC2549018989F52ECDAF /* NSString+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A30ACE3F219E4D1AAAC8 /* NSString+Encode.m */; };
@@ -73,13 +77,19 @@
 		5D97A4FD322B22A9B186B9D4 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		5D97A703F5E64D520D8E47A8 /* menubar_icon_inverse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar_icon_inverse@2x.png"; sourceTree = "<group>"; };
 		5D97A77550963DC5AB841758 /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
+		5D97A85D57ECCBEF9B338E51 /* AGLoadingStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLoadingStatusItemView.h; sourceTree = "<group>"; };
+		5D97A88DD39E72C969A16546 /* menubar_icon_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar_icon_empty@2x.png"; sourceTree = "<group>"; };
 		5D97A8B1655EAB231C02E571 /* AGCloudCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCloudCommunication.h; sourceTree = "<group>"; };
 		5D97A8DEEBC6A7EA66FC4721 /* menubar_icon_inverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubar_icon_inverse.png; sourceTree = "<group>"; };
 		5D97A8FCED59980B5C52738B /* AGStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGStatusItemView.m; sourceTree = "<group>"; };
 		5D97A9625FE471806B1B9B51 /* AGCloudCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCloudCommunication.m; sourceTree = "<group>"; };
 		5D97A97717408B61B4D6E65A /* NSString+Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encode.h"; sourceTree = "<group>"; };
 		5D97A9C95F6630A6604CDFE3 /* menubar_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar_icon@2x.png"; sourceTree = "<group>"; };
+		5D97AA772D459E3984C4C8BD /* AGLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLoadingView.h; sourceTree = "<group>"; };
+		5D97AC24E0582E5F63ADC05F /* AGLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLoadingView.m; sourceTree = "<group>"; };
 		5D97AC305BEC418C316D555D /* AGStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGStatusItemView.h; sourceTree = "<group>"; };
+		5D97AC8E88A78E90FF8FF6F9 /* AGLoadingStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLoadingStatusItemView.m; sourceTree = "<group>"; };
+		5D97AF6B692E231B194D35B4 /* menubar_icon_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubar_icon_empty.png; sourceTree = "<group>"; };
 		5D97AFDF91A68F6B6E0A6E0F /* AGCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCredentials.m; sourceTree = "<group>"; };
 		B5CB270FC94A4A43A2787545 /* Pods-DropCloud.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropCloud.xcconfig"; path = "Pods/Pods-DropCloud.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +221,8 @@
 				5D97A703F5E64D520D8E47A8 /* menubar_icon_inverse@2x.png */,
 				5D97A9C95F6630A6604CDFE3 /* menubar_icon@2x.png */,
 				5D97A1D0DE197E8866529E70 /* menubar_icon.png */,
+				5D97AF6B692E231B194D35B4 /* menubar_icon_empty.png */,
+				5D97A88DD39E72C969A16546 /* menubar_icon_empty@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -220,6 +232,10 @@
 			children = (
 				5D97A8FCED59980B5C52738B /* AGStatusItemView.m */,
 				5D97AC305BEC418C316D555D /* AGStatusItemView.h */,
+				5D97AC8E88A78E90FF8FF6F9 /* AGLoadingStatusItemView.m */,
+				5D97A85D57ECCBEF9B338E51 /* AGLoadingStatusItemView.h */,
+				5D97AC24E0582E5F63ADC05F /* AGLoadingView.m */,
+				5D97AA772D459E3984C4C8BD /* AGLoadingView.h */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -325,6 +341,8 @@
 				5D97ABAB702985BD5AC21D29 /* menubar_icon_inverse@2x.png in Resources */,
 				5D97AFCE0EEE9E9700281533 /* menubar_icon@2x.png in Resources */,
 				5D97A11A073604D959E3F63A /* menubar_icon.png in Resources */,
+				5D97A5CF74BE92BBF1448E62 /* menubar_icon_empty.png in Resources */,
+				5D97A5707F5F3A285CB19361 /* menubar_icon_empty@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +402,8 @@
 				5D97AC30000D5D58BE67DA08 /* AGStatusItemView.m in Sources */,
 				5D97AEB82B481463279CE0F8 /* AGCredentials.m in Sources */,
 				5D97AD35D4C632D5492D9646 /* NSAttributedString+Hyperlink.m in Sources */,
+				5D97A317B53CE30592C673DD /* AGLoadingStatusItemView.m in Sources */,
+				5D97A4F52DA5543D781DDCE1 /* AGLoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
