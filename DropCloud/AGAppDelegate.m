@@ -27,7 +27,7 @@
 
 @property (weak) IBOutlet NSTextField *userSettingsLabel;
 @property (weak) IBOutlet NSTextField *usernameTextfield;
-@property (weak) IBOutlet NSTextField *passwordTextfield;
+@property (weak) IBOutlet NSSecureTextField *passwordTextfield;
 
 @property (weak) IBOutlet NSButton *saveButton;
 

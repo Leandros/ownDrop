@@ -14,7 +14,7 @@
         <customObject id="Dm6-kU-E4H" customClass="AGAppDelegate">
             <connections>
                 <outlet property="aboutMenuItem" destination="Epi-E9-B4m" id="Kth-WK-m8A"/>
-                <outlet property="passwordTextfield" destination="6gb-aU-jff" id="PmX-u5-QqC"/>
+                <outlet property="passwordTextfield" destination="yO7-HK-p95" id="19t-oE-Gy1"/>
                 <outlet property="quitMenuItem" destination="mGF-w2-xCe" id="OXO-Zt-Ss1"/>
                 <outlet property="saveButton" destination="ZMn-RX-4wu" id="I1K-2u-FTt"/>
                 <outlet property="serverPathTextfield" destination="aNB-c5-gDP" id="XvS-mC-OD5"/>
@@ -78,18 +78,6 @@
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
-                        <connections>
-                            <outlet property="nextKeyView" destination="6gb-aU-jff" id="766-ak-KhC"/>
-                        </connections>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gb-aU-jff">
-                        <rect key="frame" x="20" y="71" width="240" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="jfN-GS-vmO">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dd4-za-7Fw">
                         <rect key="frame" x="20" y="133" width="154" height="17"/>
@@ -133,6 +121,18 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yO7-HK-p95">
+                        <rect key="frame" x="20" y="71" width="240" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="aaL-gI-8fY">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <allowedInputSourceLocales>
+                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                            </allowedInputSourceLocales>
+                        </secureTextFieldCell>
+                    </secureTextField>
                 </subviews>
             </view>
         </window>
