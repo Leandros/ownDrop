@@ -9,4 +9,7 @@
 "uploadcomplete" = "Upload complete!";
 "urlcopied" = "The URL has been copied to the clipboard";
 
+"erroruploading" = "Uploading failed!";
+"errorsharing" = "Sharing failed!";
+
 "abouttext" = "DropCloud is free software. It's released under the GPL v3. The source code is available on Github (";

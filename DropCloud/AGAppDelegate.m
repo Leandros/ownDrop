@@ -139,8 +139,23 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
                     notification.informativeText = NSLocalizedString(@"urlcopied", nil);
 
                     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+                } else {
+                    NSLog(@"Share Error: %@", shareError);
+                    NSUserNotification *notification = [[NSUserNotification alloc] init];
+                    notification.title = NSLocalizedString(@"errorsharing", nil);
+                    notification.informativeText = shareError.localizedDescription;
+
+                    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
                 }
             }];
+        } else {
+            NSLog(@"Upload Error: %@", uploadError);
+
+            NSUserNotification *notification = [[NSUserNotification alloc] init];
+            notification.title = NSLocalizedString(@"erroruploading", nil);
+            notification.informativeText = uploadError.localizedDescription;
+
+            [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
         }
     }];
 }
