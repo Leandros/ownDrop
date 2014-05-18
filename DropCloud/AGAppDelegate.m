@@ -157,6 +157,7 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
         [self.statusItemView setLoading:YES];
         [self.statusItemView setProgress:percentCompleted];
     }           completion:^(NSString *remoteFilePath, NSError *uploadError) {
+        [self.statusItemView setLoading:NO];
         if (!uploadError) {
             [self.cloud shareFile:remoteFilePath completion:^(NSString *url, NSError *shareError) {
                 if (!shareError) {
