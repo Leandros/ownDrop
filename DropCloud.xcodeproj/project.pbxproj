@@ -10,7 +10,6 @@
 		0C217A341927D6E100329724 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C217A331927D6E100329724 /* Cocoa.framework */; };
 		0C217A3E1927D6E100329724 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A3C1927D6E100329724 /* InfoPlist.strings */; };
 		0C217A401927D6E100329724 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C217A3F1927D6E100329724 /* main.m */; };
-		0C217A441927D6E100329724 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A421927D6E100329724 /* Credits.rtf */; };
 		0C217A471927D6E100329724 /* AGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C217A461927D6E100329724 /* AGAppDelegate.m */; };
 		0C217A4C1927D6E100329724 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A4B1927D6E100329724 /* Images.xcassets */; };
 		0C217A531927D6E100329724 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C217A521927D6E100329724 /* XCTest.framework */; };
@@ -27,6 +26,7 @@
 		5D97ABAB702985BD5AC21D29 /* menubar_icon_inverse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D97A703F5E64D520D8E47A8 /* menubar_icon_inverse@2x.png */; };
 		5D97AC2549018989F52ECDAF /* NSString+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A30ACE3F219E4D1AAAC8 /* NSString+Encode.m */; };
 		5D97AC30000D5D58BE67DA08 /* AGStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A8FCED59980B5C52738B /* AGStatusItemView.m */; };
+		5D97AD35D4C632D5492D9646 /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A1CAEC7E4651C898BCE7 /* NSAttributedString+Hyperlink.m */; };
 		5D97AEB82B481463279CE0F8 /* AGCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AFDF91A68F6B6E0A6E0F /* AGCredentials.m */; };
 		5D97AFCE0EEE9E9700281533 /* menubar_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D97A9C95F6630A6604CDFE3 /* menubar_icon@2x.png */; };
 /* End PBXBuildFile section */
@@ -51,7 +51,6 @@
 		0C217A3D1927D6E100329724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C217A3F1927D6E100329724 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C217A411927D6E100329724 /* DropCloud-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DropCloud-Prefix.pch"; sourceTree = "<group>"; };
-		0C217A431927D6E100329724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		0C217A451927D6E100329724 /* AGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
 		0C217A461927D6E100329724 /* AGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
 		0C217A4B1927D6E100329724 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -62,17 +61,18 @@
 		0C217A5D1927D6E100329724 /* DropCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropCloudTests.m; sourceTree = "<group>"; };
 		0C217A6C1928C15000329724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C217A6D1928C16700329724 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0C217A6E1928C16700329724 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Credits.rtf; sourceTree = "<group>"; };
 		0C217A6F1928C16700329724 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C217A701928C16700329724 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C217A711928C18E00329724 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		4CB48C48D41B4576850FC035 /* libPods-DropCloud.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropCloud.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D97A1CAEC7E4651C898BCE7 /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
 		5D97A1D0DE197E8866529E70 /* menubar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubar_icon.png; sourceTree = "<group>"; };
 		5D97A2419202F10394ED8E30 /* AGCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCredentials.h; sourceTree = "<group>"; };
 		5D97A2CCBADB32B32F91E233 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		5D97A30ACE3F219E4D1AAAC8 /* NSString+Encode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encode.m"; sourceTree = "<group>"; };
 		5D97A4FD322B22A9B186B9D4 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		5D97A703F5E64D520D8E47A8 /* menubar_icon_inverse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar_icon_inverse@2x.png"; sourceTree = "<group>"; };
+		5D97A77550963DC5AB841758 /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
 		5D97A8B1655EAB231C02E571 /* AGCloudCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCloudCommunication.h; sourceTree = "<group>"; };
 		5D97A8DEEBC6A7EA66FC4721 /* menubar_icon_inverse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubar_icon_inverse.png; sourceTree = "<group>"; };
 		5D97A8FCED59980B5C52738B /* AGStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGStatusItemView.m; sourceTree = "<group>"; };
@@ -170,7 +170,6 @@
 				0C217A3C1927D6E100329724 /* InfoPlist.strings */,
 				0C217A3F1927D6E100329724 /* main.m */,
 				0C217A411927D6E100329724 /* DropCloud-Prefix.pch */,
-				0C217A421927D6E100329724 /* Credits.rtf */,
 				0C217A6B1928C14C00329724 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
@@ -232,6 +231,8 @@
 				5D97A4FD322B22A9B186B9D4 /* NSData+Base64.m */,
 				5D97A97717408B61B4D6E65A /* NSString+Encode.h */,
 				5D97A30ACE3F219E4D1AAAC8 /* NSString+Encode.m */,
+				5D97A1CAEC7E4651C898BCE7 /* NSAttributedString+Hyperlink.m */,
+				5D97A77550963DC5AB841758 /* NSAttributedString+Hyperlink.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -319,7 +320,6 @@
 				0C217A3E1927D6E100329724 /* InfoPlist.strings in Resources */,
 				0C217A691928C14C00329724 /* Localizable.strings in Resources */,
 				0C217A4C1927D6E100329724 /* Images.xcassets in Resources */,
-				0C217A441927D6E100329724 /* Credits.rtf in Resources */,
 				0C217A721928C18E00329724 /* MainMenu.xib in Resources */,
 				5D97A22E2F224567984A6A08 /* menubar_icon_inverse.png in Resources */,
 				5D97ABAB702985BD5AC21D29 /* menubar_icon_inverse@2x.png in Resources */,
@@ -383,6 +383,7 @@
 				5D97A9DF30105BCF6634BF0C /* AGCloudCommunication.m in Sources */,
 				5D97AC30000D5D58BE67DA08 /* AGStatusItemView.m in Sources */,
 				5D97AEB82B481463279CE0F8 /* AGCredentials.m in Sources */,
+				5D97AD35D4C632D5492D9646 /* NSAttributedString+Hyperlink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,15 +413,6 @@
 				0C217A6D1928C16700329724 /* de */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		0C217A421927D6E100329724 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0C217A431927D6E100329724 /* en */,
-				0C217A6E1928C16700329724 /* de */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		0C217A5A1927D6E100329724 /* InfoPlist.strings */ = {

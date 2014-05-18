@@ -8,3 +8,5 @@
 
 "uploadcomplete" = "Upload erfolgreich!";
 "urlcopied" = "Die URL wurde in die Zwischenablage kopiert";
+
+"abouttext" = "DropCloud ist freie software. Es ist unter der GPL v3 veröffentlicht. Der Quellcode steht auf Github ( ";

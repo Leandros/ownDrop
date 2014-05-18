@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
@@ -14,6 +15,8 @@
         <customObject id="Dm6-kU-E4H" customClass="AGAppDelegate">
             <connections>
                 <outlet property="aboutMenuItem" destination="Epi-E9-B4m" id="Kth-WK-m8A"/>
+                <outlet property="aboutTextfield" destination="h9f-6V-5Gb" id="isD-ri-XnD"/>
+                <outlet property="aboutWindow" destination="1A6-Qx-cQC" id="LnA-Cc-PX8"/>
                 <outlet property="passwordTextfield" destination="yO7-HK-p95" id="19t-oE-Gy1"/>
                 <outlet property="quitMenuItem" destination="mGF-w2-xCe" id="OXO-Zt-Ss1"/>
                 <outlet property="saveButton" destination="ZMn-RX-4wu" id="I1K-2u-FTt"/>
@@ -53,7 +56,7 @@
         <window title="DropCloud Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="T4a-hj-8ve">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="163" y="199" width="280" height="309"/>
+            <rect key="contentRect" x="706" y="388" width="280" height="309"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" id="gzI-jO-pyo">
                 <rect key="frame" x="0.0" y="0.0" width="280" height="309"/>
@@ -133,6 +136,54 @@
                             </allowedInputSourceLocales>
                         </secureTextFieldCell>
                     </secureTextField>
+                </subviews>
+            </view>
+        </window>
+        <window title="About DropCloud" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1A6-Qx-cQC">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="658" y="399" width="400" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <view key="contentView" id="hMc-be-Zcl">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8mZ-xn-tap">
+                        <rect key="frame" x="99" y="210" width="204" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="DropCloud" id="Q4g-4m-nnR">
+                            <font key="font" size="25" name="HelveticaNeue-Light"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lb2-SU-u1f">
+                        <rect key="frame" x="20" y="174" width="362" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Developed by:" id="moo-uz-lng">
+                            <font key="font" size="13" name="HelveticaNeue-Bold"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yhb-Jv-qnu">
+                        <rect key="frame" x="34" y="124" width="348" height="50"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Arvid Gerstmann" id="ZEJ-Nu-TxU">
+                            <font key="font" size="13" name="HelveticaNeue-Light"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h9f-6V-5Gb">
+                        <rect key="frame" x="15" y="36" width="371" height="80"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="DropCloud is free software. It's released under the GPL v3. The source code is available on Github " id="BbX-Os-nlx">
+                            <font key="font" size="13" name="HelveticaNeue-Light"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
         </window>

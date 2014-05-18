@@ -10,6 +10,7 @@
 #import "AGStatusItemView.h"
 #import "AGCloudCommunication.h"
 #import "AGCredentials.h"
+#import "NSAttributedString+Hyperlink.h"
 
 @interface AGAppDelegate ()
 
@@ -30,6 +31,9 @@
 @property (weak) IBOutlet NSSecureTextField *passwordTextfield;
 
 @property (weak) IBOutlet NSButton *saveButton;
+
+@property (unsafe_unretained) IBOutlet NSWindow *aboutWindow;
+@property (weak) IBOutlet NSTextField *aboutTextfield;
 
 - (IBAction)settingsAction:(id)sender;
 - (IBAction)aboutAction:(id)sender;
@@ -70,6 +74,19 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
 
     self.serverUrlTextfield.stringValue = self.cloud.baseUrl;
     self.serverPathTextfield.stringValue = self.cloud.remoteDirectoryPath;
+
+    [self.aboutTextfield setAllowsEditingTextAttributes:YES];
+    [self.aboutTextfield setSelectable:YES];
+
+    NSURL *url = [NSURL URLWithString:@"https://github.com/leandros/dropcloud"];
+    NSFont *font = [NSFont fontWithName:@"HelveticaNeue-Light" size:13];
+    NSDictionary *attr = @{
+        NSFontAttributeName: font
+    };
+    NSMutableAttributedString *aboutString = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"abouttext", nil) attributes:attr];
+    [aboutString appendAttributedString:[NSAttributedString hyperlinkFromString:@"https://GitHub.com/Leandros/DropCloud" withURL:url attributes:attr]];
+    [aboutString appendAttributedString:[[NSAttributedString alloc] initWithString:@")" attributes:attr]];
+    self.aboutTextfield.attributedStringValue = aboutString;
 }
 
 
@@ -82,6 +99,8 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
 }
 
 - (IBAction)aboutAction:(id)sender {
+    [self.aboutWindow makeKeyAndOrderFront:self];
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 - (IBAction)quitAction:(id)sender {
