@@ -17,6 +17,7 @@
                 <outlet property="aboutMenuItem" destination="Epi-E9-B4m" id="Kth-WK-m8A"/>
                 <outlet property="aboutTextfield" destination="h9f-6V-5Gb" id="isD-ri-XnD"/>
                 <outlet property="aboutWindow" destination="1A6-Qx-cQC" id="LnA-Cc-PX8"/>
+                <outlet property="developedByLabel" destination="lb2-SU-u1f" id="i8U-yn-JJ8"/>
                 <outlet property="passwordTextfield" destination="yO7-HK-p95" id="19t-oE-Gy1"/>
                 <outlet property="quitMenuItem" destination="mGF-w2-xCe" id="OXO-Zt-Ss1"/>
                 <outlet property="saveButton" destination="ZMn-RX-4wu" id="I1K-2u-FTt"/>
@@ -94,7 +95,7 @@
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87u-6L-cVJ">
                         <rect key="frame" x="20" y="232" width="240" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Server URL (e.g https://cloud.example.com)" drawsBackground="YES" usesSingleLineMode="YES" id="Yth-Ye-xeW">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Server URL" drawsBackground="YES" usesSingleLineMode="YES" id="Yth-Ye-xeW">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

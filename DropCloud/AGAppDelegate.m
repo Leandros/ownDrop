@@ -33,6 +33,7 @@
 @property (weak) IBOutlet NSButton *saveButton;
 
 @property (unsafe_unretained) IBOutlet NSWindow *aboutWindow;
+@property (weak) IBOutlet NSTextField *developedByLabel;
 @property (weak) IBOutlet NSTextField *aboutTextfield;
 
 - (IBAction)settingsAction:(id)sender;
@@ -49,8 +50,8 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
 
 + (void)initialize {
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{
-            kPrefServerUrl: @"",
-            kPrefServerPath: @"",
+            kPrefServerUrl : @"",
+            kPrefServerPath : @"",
             @"CredentialsStorage" : @""
     }];
 }
@@ -81,12 +82,30 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
     NSURL *url = [NSURL URLWithString:@"https://github.com/leandros/dropcloud"];
     NSFont *font = [NSFont fontWithName:@"HelveticaNeue-Light" size:13];
     NSDictionary *attr = @{
-        NSFontAttributeName: font
+            NSFontAttributeName : font
     };
     NSMutableAttributedString *aboutString = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"abouttext", nil) attributes:attr];
     [aboutString appendAttributedString:[NSAttributedString hyperlinkFromString:@"https://GitHub.com/Leandros/DropCloud" withURL:url attributes:attr]];
     [aboutString appendAttributedString:[[NSAttributedString alloc] initWithString:@")" attributes:attr]];
     self.aboutTextfield.attributedStringValue = aboutString;
+
+    NSFont *boldFont = [NSFont fontWithName:@"HelveticaNeue-Bold" size:13];
+    NSDictionary *boldAttr = @{
+            NSFontAttributeName : boldFont
+    };
+    self.developedByLabel.attributedStringValue = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"developedby", nil) attributes:boldAttr];
+
+    self.settingsMenuItem.title = NSLocalizedString(@"settings", nil);
+    self.aboutMenuItem.title = NSLocalizedString(@"about", nil);
+    self.quitMenuItem.title = NSLocalizedString(@"quit", nil);
+
+    self.serverSettingsLabel.stringValue = NSLocalizedString(@"serversettings", nil);
+    [self.serverUrlTextfield.cell setPlaceholderString:NSLocalizedString(@"serverurl", nil)];
+    [self.serverPathTextfield.cell setPlaceholderString:NSLocalizedString(@"serverpath", nil)];
+
+    self.userSettingsLabel.stringValue = NSLocalizedString(@"usersettings", nil);
+    [self.usernameTextfield.cell setPlaceholderString:NSLocalizedString(@"username", nil)];
+    [self.passwordTextfield.cell setPlaceholderString:NSLocalizedString(@"password", nil)];
 }
 
 
