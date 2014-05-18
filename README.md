@@ -5,6 +5,14 @@ Your private One-Click uploader for OwnCloud, build on and for Mac OS X.
 ![promo](https://raw.githubusercontent.com/Leandros/DropCloud/master/Promo/promo.gif)
 
 
+### Installation
+Download the current version [here](https://github.com/Leandros/DropCloud/releases/download/0.1.0/DropCloud-0.1.0.zip). Unzip the file, move `DropCloud.app` to the `Application` folder and start it.
+
+Before first use, you have to fill in your **OwnCloud** server and your login, to do so, click on the icon in the menu bar and go to the settings. Below you can see an example:
+
+![example](https://raw.githubusercontent.com/Leandros/DropCloud/master/Promo/example.png)
+
+
 ### Requirements
 
 - Mac OS X 10.8 or later
