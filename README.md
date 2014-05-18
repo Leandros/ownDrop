@@ -9,7 +9,7 @@ Your private One-Click uploader for OwnCloud, build on and for Mac OS X.
 
 
 ### Development
-DropCloud uses [CocoaPods](http://cocoapods.com) to handle it's dependencies and the git-flow branching model.
+DropCloud uses [CocoaPods](http://cocoapods.org) to handle it's dependencies and the git-flow branching model.
 To build DropCloud, you have to install all dependencies first (`pod install`).
 Make sure to open the `DropCloud.xcworkspace`, instead of the `.xcodeproj`.
 
