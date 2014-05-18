@@ -78,6 +78,7 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
 
 - (IBAction)settingsAction:(id)sender {
     [self.window makeKeyAndOrderFront:self];
+    [NSApp activateIgnoringOtherApps:YES];
 }
 
 - (IBAction)aboutAction:(id)sender {
