@@ -2,6 +2,8 @@
 
 Your private One-Click uploader for OwnCloud, build on and for Mac OS X.
 
+![promo](https://raw.githubusercontent.com/Leandros/DropCloud/master/Promo/promo.gif)
+
 
 ### Requirements
 
