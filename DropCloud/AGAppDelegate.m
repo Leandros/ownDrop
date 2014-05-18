@@ -59,8 +59,8 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:STATUS_ITEM_VIEW_WIDTH];
     self.statusItemView = [[AGStatusItemView alloc] initWithStatusItem:self.statusItem];
     self.statusItemView.menu = self.statusMenu;
-    self.statusItemView.image = [NSImage imageNamed:@"4"];
-    self.statusItemView.highlightImage = [NSImage imageNamed:@"4"];
+    self.statusItemView.image = [NSImage imageNamed:@"menubar_icon"];
+    self.statusItemView.highlightImage = [NSImage imageNamed:@"menubar_icon_inverse"];
     [self.statusItemView addObserver:@selector(fileDropped:) withTarget:self forEvent:AGStatusItemEventFileDropped];
     self.statusItem.view = self.statusItemView;
 

@@ -5,7 +5,7 @@
 
 #import "AGStatusItemView.h"
 
-@interface AGStatusItemView ()
+@interface AGStatusItemView () <NSMenuDelegate>
 
 @property (nonatomic, strong) NSStatusItem *statusItem;
 @property (nonatomic, assign, setter=setHighlighted:) BOOL isHighlighted;
@@ -104,6 +104,27 @@
     }
 }
 
+- (void)mouseDown:(NSEvent *)theEvent {
+    [super mouseDown:theEvent];
+    self.isHighlighted = YES;
+}
+
+
+#pragma mark -
+#pragma mark MenuDelegate -
+
+- (void)menuWillOpen:(NSMenu *)menu {
+    if (!self.isHighlighted) {
+        self.isHighlighted = YES;
+    }
+}
+
+- (void)menuDidClose:(NSMenu *)menu {
+    if (self.isHighlighted) {
+        self.isHighlighted = NO;
+    }
+}
+
 
 #pragma mark -
 #pragma mark Drawing -
@@ -138,6 +159,20 @@
         if (self.isHighlighted) {
             [self setNeedsDisplay:YES];
         }
+    }
+}
+
+- (void)setMenu:(NSMenu *)menu {
+    if (_menu != menu) {
+        _menu = menu;
+        _menu.delegate = self;
+    }
+}
+
+- (void)setHighlighted:(BOOL)isHighlighted {
+    if (_isHighlighted != isHighlighted) {
+        _isHighlighted = isHighlighted;
+        [self setNeedsDisplay:YES];
     }
 }
 
