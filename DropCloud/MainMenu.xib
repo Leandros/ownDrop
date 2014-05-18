@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Dm6-kU-E4H" id="2RF-6w-umu"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="Dm6-kU-E4H" customClass="AGAppDelegate">
+            <connections>
+                <outlet property="aboutMenuItem" destination="Epi-E9-B4m" id="Kth-WK-m8A"/>
+                <outlet property="passwordTextfield" destination="6gb-aU-jff" id="PmX-u5-QqC"/>
+                <outlet property="quitMenuItem" destination="mGF-w2-xCe" id="OXO-Zt-Ss1"/>
+                <outlet property="saveButton" destination="ZMn-RX-4wu" id="I1K-2u-FTt"/>
+                <outlet property="serverPathTextfield" destination="aNB-c5-gDP" id="XvS-mC-OD5"/>
+                <outlet property="serverSettingsLabel" destination="3Az-wc-iMG" id="aCu-FI-S5q"/>
+                <outlet property="serverUrlTextfield" destination="87u-6L-cVJ" id="TvK-XN-0jg"/>
+                <outlet property="settingsMenuItem" destination="WlY-HH-MJ7" id="Dzb-IQ-sRY"/>
+                <outlet property="statusMenu" destination="gjI-GA-vII" id="Vey-c2-EnM"/>
+                <outlet property="userSettingsLabel" destination="dd4-za-7Fw" id="lVU-6d-hPU"/>
+                <outlet property="usernameTextfield" destination="tPF-0Q-tb5" id="CaD-zy-JHn"/>
+                <outlet property="window" destination="T4a-hj-8ve" id="OFd-hk-beo"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="gjI-GA-vII">
+            <items>
+                <menuItem title="Settings" id="WlY-HH-MJ7">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="settingsAction:" target="Dm6-kU-E4H" id="4wd-vD-fnq"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="About" id="Epi-E9-B4m">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="aboutAction:" target="Dm6-kU-E4H" id="MwM-K7-ma6"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" id="mGF-w2-xCe">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitAction:" target="Dm6-kU-E4H" id="Rls-MU-Wwb"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="T4a-hj-8ve">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="163" y="199" width="280" height="309"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <view key="contentView" id="gzI-jO-pyo">
+                <rect key="frame" x="0.0" y="0.0" width="280" height="309"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMn-RX-4wu">
+                        <rect key="frame" x="154" y="14" width="112" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LiO-Tm-Tpm">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="saveAction:" target="Dm6-kU-E4H" id="DUJ-a5-KJE"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPF-0Q-tb5">
+                        <rect key="frame" x="20" y="103" width="240" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Username" drawsBackground="YES" usesSingleLineMode="YES" id="C11-Uc-ZKg">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="nextKeyView" destination="6gb-aU-jff" id="766-ak-KhC"/>
+                        </connections>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gb-aU-jff">
+                        <rect key="frame" x="20" y="71" width="240" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="jfN-GS-vmO">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dd4-za-7Fw">
+                        <rect key="frame" x="20" y="133" width="154" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="User Settings" id="JHJ-lC-EGG">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="87u-6L-cVJ">
+                        <rect key="frame" x="20" y="232" width="240" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Server URL (e.g https://cloud.example.com)" drawsBackground="YES" usesSingleLineMode="YES" id="Yth-Ye-xeW">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="nextKeyView" destination="aNB-c5-gDP" id="ayK-Vv-TE7"/>
+                        </connections>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNB-c5-gDP">
+                        <rect key="frame" x="20" y="200" width="240" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Path (leave empty for root directory)" drawsBackground="YES" usesSingleLineMode="YES" id="A7G-gF-aee">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <outlet property="nextKeyView" destination="tPF-0Q-tb5" id="l7t-8H-sq1"/>
+                        </connections>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Az-wc-iMG">
+                        <rect key="frame" x="20" y="262" width="154" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Server Settings" id="9qP-gm-k9y">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+        </window>
+    </objects>
+</document>

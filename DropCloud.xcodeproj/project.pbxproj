@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C217A341927D6E100329724 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C217A331927D6E100329724 /* Cocoa.framework */; };
+		0C217A3E1927D6E100329724 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A3C1927D6E100329724 /* InfoPlist.strings */; };
+		0C217A401927D6E100329724 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C217A3F1927D6E100329724 /* main.m */; };
+		0C217A441927D6E100329724 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A421927D6E100329724 /* Credits.rtf */; };
+		0C217A471927D6E100329724 /* AGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C217A461927D6E100329724 /* AGAppDelegate.m */; };
+		0C217A4C1927D6E100329724 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A4B1927D6E100329724 /* Images.xcassets */; };
+		0C217A531927D6E100329724 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C217A521927D6E100329724 /* XCTest.framework */; };
+		0C217A541927D6E100329724 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C217A331927D6E100329724 /* Cocoa.framework */; };
+		0C217A5C1927D6E100329724 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A5A1927D6E100329724 /* InfoPlist.strings */; };
+		0C217A5E1927D6E100329724 /* DropCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C217A5D1927D6E100329724 /* DropCloudTests.m */; };
+		0C217A691928C14C00329724 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A6B1928C14C00329724 /* Localizable.strings */; };
+		0C217A721928C18E00329724 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A711928C18E00329724 /* MainMenu.xib */; };
+		444AF4DB96574B6AA4E45D6D /* libPods-DropCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB48C48D41B4576850FC035 /* libPods-DropCloud.a */; };
+		5D97A10FE5E2EA54463FE038 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A4FD322B22A9B186B9D4 /* NSData+Base64.m */; };
+		5D97A9DF30105BCF6634BF0C /* AGCloudCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A9625FE471806B1B9B51 /* AGCloudCommunication.m */; };
+		5D97A9FC715BC7DB558EE110 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D97AEF403EA7B3185E0C395 /* 4.jpg */; };
+		5D97AC2549018989F52ECDAF /* NSString+Encode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A30ACE3F219E4D1AAAC8 /* NSString+Encode.m */; };
+		5D97AC30000D5D58BE67DA08 /* AGStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A8FCED59980B5C52738B /* AGStatusItemView.m */; };
+		5D97AEB82B481463279CE0F8 /* AGCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AFDF91A68F6B6E0A6E0F /* AGCredentials.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C217A551927D6E100329724 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C217A281927D6E100329724 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C217A2F1927D6E100329724;
+			remoteInfo = DropCloud;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C217A301927D6E100329724 /* DropCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C217A331927D6E100329724 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		0C217A361927D6E100329724 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		0C217A371927D6E100329724 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0C217A381927D6E100329724 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0C217A3B1927D6E100329724 /* DropCloud-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropCloud-Info.plist"; sourceTree = "<group>"; };
+		0C217A3D1927D6E100329724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0C217A3F1927D6E100329724 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0C217A411927D6E100329724 /* DropCloud-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DropCloud-Prefix.pch"; sourceTree = "<group>"; };
+		0C217A431927D6E100329724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		0C217A451927D6E100329724 /* AGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
+		0C217A461927D6E100329724 /* AGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
+		0C217A4B1927D6E100329724 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0C217A511927D6E100329724 /* DropCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C217A521927D6E100329724 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0C217A591927D6E100329724 /* DropCloudTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropCloudTests-Info.plist"; sourceTree = "<group>"; };
+		0C217A5B1927D6E100329724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0C217A5D1927D6E100329724 /* DropCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropCloudTests.m; sourceTree = "<group>"; };
+		0C217A6C1928C15000329724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0C217A6D1928C16700329724 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0C217A6E1928C16700329724 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Credits.rtf; sourceTree = "<group>"; };
+		0C217A6F1928C16700329724 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0C217A701928C16700329724 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0C217A711928C18E00329724 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		4CB48C48D41B4576850FC035 /* libPods-DropCloud.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropCloud.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D97A2419202F10394ED8E30 /* AGCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCredentials.h; sourceTree = "<group>"; };
+		5D97A2CCBADB32B32F91E233 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		5D97A30ACE3F219E4D1AAAC8 /* NSString+Encode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encode.m"; sourceTree = "<group>"; };
+		5D97A4FD322B22A9B186B9D4 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		5D97A8B1655EAB231C02E571 /* AGCloudCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCloudCommunication.h; sourceTree = "<group>"; };
+		5D97A8FCED59980B5C52738B /* AGStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGStatusItemView.m; sourceTree = "<group>"; };
+		5D97A9625FE471806B1B9B51 /* AGCloudCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCloudCommunication.m; sourceTree = "<group>"; };
+		5D97A97717408B61B4D6E65A /* NSString+Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encode.h"; sourceTree = "<group>"; };
+		5D97AC305BEC418C316D555D /* AGStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGStatusItemView.h; sourceTree = "<group>"; };
+		5D97AEF403EA7B3185E0C395 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		5D97AFDF91A68F6B6E0A6E0F /* AGCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCredentials.m; sourceTree = "<group>"; };
+		B5CB270FC94A4A43A2787545 /* Pods-DropCloud.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropCloud.xcconfig"; path = "Pods/Pods-DropCloud.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C217A2D1927D6E100329724 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C217A341927D6E100329724 /* Cocoa.framework in Frameworks */,
+				444AF4DB96574B6AA4E45D6D /* libPods-DropCloud.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C217A4E1927D6E100329724 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C217A541927D6E100329724 /* Cocoa.framework in Frameworks */,
+				0C217A531927D6E100329724 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C217A271927D6E100329724 = {
+			isa = PBXGroup;
+			children = (
+				0C217A391927D6E100329724 /* DropCloud */,
+				0C217A571927D6E100329724 /* DropCloudTests */,
+				0C217A321927D6E100329724 /* Frameworks */,
+				0C217A311927D6E100329724 /* Products */,
+				B5CB270FC94A4A43A2787545 /* Pods-DropCloud.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		0C217A311927D6E100329724 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C217A301927D6E100329724 /* DropCloud.app */,
+				0C217A511927D6E100329724 /* DropCloudTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0C217A321927D6E100329724 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C217A331927D6E100329724 /* Cocoa.framework */,
+				0C217A521927D6E100329724 /* XCTest.framework */,
+				0C217A351927D6E100329724 /* Other Frameworks */,
+				4CB48C48D41B4576850FC035 /* libPods-DropCloud.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C217A351927D6E100329724 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C217A361927D6E100329724 /* AppKit.framework */,
+				0C217A371927D6E100329724 /* CoreData.framework */,
+				0C217A381927D6E100329724 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		0C217A391927D6E100329724 /* DropCloud */ = {
+			isa = PBXGroup;
+			children = (
+				0C217A451927D6E100329724 /* AGAppDelegate.h */,
+				0C217A461927D6E100329724 /* AGAppDelegate.m */,
+				0C217A711928C18E00329724 /* MainMenu.xib */,
+				0C217A4B1927D6E100329724 /* Images.xcassets */,
+				0C217A3A1927D6E100329724 /* Supporting Files */,
+				5D97ADA03B095CDFDD7F02E5 /* Utils */,
+				5D97A4AD0665F8C681E8F909 /* CloudAPI */,
+				5D97AD61E9FECAB135D99846 /* CustomViews */,
+				5D97ABE8391671C2BF98AD6C /* Resources */,
+			);
+			path = DropCloud;
+			sourceTree = "<group>";
+		};
+		0C217A3A1927D6E100329724 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C217A3B1927D6E100329724 /* DropCloud-Info.plist */,
+				0C217A3C1927D6E100329724 /* InfoPlist.strings */,
+				0C217A3F1927D6E100329724 /* main.m */,
+				0C217A411927D6E100329724 /* DropCloud-Prefix.pch */,
+				0C217A421927D6E100329724 /* Credits.rtf */,
+				0C217A6B1928C14C00329724 /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C217A571927D6E100329724 /* DropCloudTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C217A5D1927D6E100329724 /* DropCloudTests.m */,
+				0C217A581927D6E100329724 /* Supporting Files */,
+			);
+			path = DropCloudTests;
+			sourceTree = "<group>";
+		};
+		0C217A581927D6E100329724 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C217A591927D6E100329724 /* DropCloudTests-Info.plist */,
+				0C217A5A1927D6E100329724 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D97A4AD0665F8C681E8F909 /* CloudAPI */ = {
+			isa = PBXGroup;
+			children = (
+				5D97A8B1655EAB231C02E571 /* AGCloudCommunication.h */,
+				5D97A9625FE471806B1B9B51 /* AGCloudCommunication.m */,
+				5D97AFDF91A68F6B6E0A6E0F /* AGCredentials.m */,
+				5D97A2419202F10394ED8E30 /* AGCredentials.h */,
+			);
+			path = CloudAPI;
+			sourceTree = "<group>";
+		};
+		5D97ABE8391671C2BF98AD6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D97AEF403EA7B3185E0C395 /* 4.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5D97AD61E9FECAB135D99846 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				5D97A8FCED59980B5C52738B /* AGStatusItemView.m */,
+				5D97AC305BEC418C316D555D /* AGStatusItemView.h */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		5D97ADA03B095CDFDD7F02E5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5D97A2CCBADB32B32F91E233 /* NSData+Base64.h */,
+				5D97A4FD322B22A9B186B9D4 /* NSData+Base64.m */,
+				5D97A97717408B61B4D6E65A /* NSString+Encode.h */,
+				5D97A30ACE3F219E4D1AAAC8 /* NSString+Encode.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0C217A2F1927D6E100329724 /* DropCloud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C217A611927D6E100329724 /* Build configuration list for PBXNativeTarget "DropCloud" */;
+			buildPhases = (
+				C789BD269197423F8CE5635D /* Check Pods Manifest.lock */,
+				0C217A2C1927D6E100329724 /* Sources */,
+				0C217A2D1927D6E100329724 /* Frameworks */,
+				0C217A2E1927D6E100329724 /* Resources */,
+				D3B1B8780FC14177BD1EDDEF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropCloud;
+			productName = DropCloud;
+			productReference = 0C217A301927D6E100329724 /* DropCloud.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0C217A501927D6E100329724 /* DropCloudTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C217A641927D6E100329724 /* Build configuration list for PBXNativeTarget "DropCloudTests" */;
+			buildPhases = (
+				0C217A4D1927D6E100329724 /* Sources */,
+				0C217A4E1927D6E100329724 /* Frameworks */,
+				0C217A4F1927D6E100329724 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C217A561927D6E100329724 /* PBXTargetDependency */,
+			);
+			name = DropCloudTests;
+			productName = DropCloudTests;
+			productReference = 0C217A511927D6E100329724 /* DropCloudTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0C217A281927D6E100329724 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AG;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Arvid Gerstmann";
+				TargetAttributes = {
+					0C217A501927D6E100329724 = {
+						TestTargetID = 0C217A2F1927D6E100329724;
+					};
+				};
+			};
+			buildConfigurationList = 0C217A2B1927D6E100329724 /* Build configuration list for PBXProject "DropCloud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = 0C217A271927D6E100329724;
+			productRefGroup = 0C217A311927D6E100329724 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0C217A2F1927D6E100329724 /* DropCloud */,
+				0C217A501927D6E100329724 /* DropCloudTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0C217A2E1927D6E100329724 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C217A3E1927D6E100329724 /* InfoPlist.strings in Resources */,
+				0C217A691928C14C00329724 /* Localizable.strings in Resources */,
+				0C217A4C1927D6E100329724 /* Images.xcassets in Resources */,
+				0C217A441927D6E100329724 /* Credits.rtf in Resources */,
+				5D97A9FC715BC7DB558EE110 /* 4.jpg in Resources */,
+				0C217A721928C18E00329724 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C217A4F1927D6E100329724 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C217A5C1927D6E100329724 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C789BD269197423F8CE5635D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D3B1B8780FC14177BD1EDDEF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-DropCloud-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0C217A2C1927D6E100329724 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C217A471927D6E100329724 /* AGAppDelegate.m in Sources */,
+				0C217A401927D6E100329724 /* main.m in Sources */,
+				5D97A10FE5E2EA54463FE038 /* NSData+Base64.m in Sources */,
+				5D97AC2549018989F52ECDAF /* NSString+Encode.m in Sources */,
+				5D97A9DF30105BCF6634BF0C /* AGCloudCommunication.m in Sources */,
+				5D97AC30000D5D58BE67DA08 /* AGStatusItemView.m in Sources */,
+				5D97AEB82B481463279CE0F8 /* AGCredentials.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C217A4D1927D6E100329724 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C217A5E1927D6E100329724 /* DropCloudTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C217A561927D6E100329724 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C217A2F1927D6E100329724 /* DropCloud */;
+			targetProxy = 0C217A551927D6E100329724 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0C217A3C1927D6E100329724 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C217A3D1927D6E100329724 /* en */,
+				0C217A6D1928C16700329724 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0C217A421927D6E100329724 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C217A431927D6E100329724 /* en */,
+				0C217A6E1928C16700329724 /* de */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		0C217A5A1927D6E100329724 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C217A5B1927D6E100329724 /* en */,
+				0C217A701928C16700329724 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0C217A6B1928C14C00329724 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C217A6C1928C15000329724 /* en */,
+				0C217A6F1928C16700329724 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0C217A5F1927D6E100329724 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0C217A601927D6E100329724 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0C217A621927D6E100329724 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5CB270FC94A4A43A2787545 /* Pods-DropCloud.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropCloud/DropCloud-Prefix.pch";
+				INFOPLIST_FILE = "DropCloud/DropCloud-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0C217A631927D6E100329724 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5CB270FC94A4A43A2787545 /* Pods-DropCloud.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropCloud/DropCloud-Prefix.pch";
+				INFOPLIST_FILE = "DropCloud/DropCloud-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0C217A651927D6E100329724 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DropCloud.app/Contents/MacOS/DropCloud";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropCloud/DropCloud-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DropCloudTests/DropCloudTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0C217A661927D6E100329724 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DropCloud.app/Contents/MacOS/DropCloud";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropCloud/DropCloud-Prefix.pch";
+				INFOPLIST_FILE = "DropCloudTests/DropCloudTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0C217A2B1927D6E100329724 /* Build configuration list for PBXProject "DropCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C217A5F1927D6E100329724 /* Debug */,
+				0C217A601927D6E100329724 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C217A611927D6E100329724 /* Build configuration list for PBXNativeTarget "DropCloud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C217A621927D6E100329724 /* Debug */,
+				0C217A631927D6E100329724 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C217A641927D6E100329724 /* Build configuration list for PBXNativeTarget "DropCloudTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C217A651927D6E100329724 /* Debug */,
+				0C217A661927D6E100329724 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0C217A281927D6E100329724 /* Project object */;
+}

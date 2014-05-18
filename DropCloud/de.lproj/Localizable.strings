@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  DropCloud
+
+  Created by Arvid Gerstmann on 18/05/14.
+  Copyright (c) 2014 Arvid Gerstmann. All rights reserved.
+*/
+
+"uploadcomplete" = "Upload erfolgreich!";
+"urlcopied" = "Die URL wurde in die Zwischenablage kopiert";
