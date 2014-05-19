@@ -99,14 +99,18 @@
 
 - (void)mouseUp:(NSEvent *)theEvent {
     [super mouseUp:theEvent];
-    if (self.menu) {
-        [self.statusItem popUpStatusItemMenu:self.menu];
-    }
 }
 
 - (void)mouseDown:(NSEvent *)theEvent {
     [super mouseDown:theEvent];
-    self.isHighlighted = YES;
+    if (self.isHighlighted) {
+        self.isHighlighted = NO;
+    } else {
+        self.isHighlighted = YES;
+        if (self.menu) {
+            [self.statusItem popUpStatusItemMenu:self.menu];
+        }
+    }
 }
 
 
