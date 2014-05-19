@@ -19,7 +19,7 @@ Before first use, you have to fill in your **OwnCloud** server and your login, t
 
 
 ### Development
-DropCloud uses [CocoaPods](http://cocoapods.org) to handle it's dependencies and the git-flow branching model.
+DropCloud uses [CocoaPods](http://cocoapods.org) to handle it's dependencies and the [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) branching model. The master branch is always stable and the develop branch is the version, which is currently in development.
 To build DropCloud, you have to install all dependencies first (`pod install`).
 Make sure to open the `DropCloud.xcworkspace`, instead of the `.xcodeproj`.
 
