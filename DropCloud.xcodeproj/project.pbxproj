@@ -46,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C217A301927D6E100329724 /* DropCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C217A301927D6E100329724 /* DropCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DropCloud.app; path = ownDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C217A331927D6E100329724 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0C217A361927D6E100329724 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		0C217A371927D6E100329724 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
