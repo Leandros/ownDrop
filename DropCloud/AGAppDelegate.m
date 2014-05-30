@@ -156,8 +156,6 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
     NSArray *fileNames = [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType];
     NSString *fileName = fileNames[0];
 
-    NSLog(@"fileDropped | fileNames: %@", fileNames);
-    NSLog(@"fileDropped | fileName: %@", fileName);
     [self.cloud uploadFile:fileName progress:^(float percentCompleted) {
         [self.statusItemView setLoading:YES];
         [self.statusItemView setProgress:percentCompleted];

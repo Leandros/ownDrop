@@ -70,12 +70,11 @@
     serverUrl = [serverUrl stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     serverUrl = [serverUrl encodeString:NSUTF8StringEncoding];
 
-    NSLog(@"%s | serverUrl: %@", __PRETTY_FUNCTION__, serverUrl);
     NSURLRequest *request = [self requestWithMethod:@"PUT" url:serverUrl body:nil];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     NSProgress *progress;
     NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request
-                                                               fromFile:[NSURL URLWithString:localFilePath]
+                                                               fromFile:[NSURL fileURLWithPath:localFilePath]
                                                                progress:&progress
                                                       completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
                 completionBlock(imagePath, error);
@@ -103,7 +102,6 @@
     NSString *postBody = [NSString stringWithFormat:@"path=%@&shareType=3", remoteFilePath];
     NSURLRequest *request = [self requestWithMethod:@"POST" url:serverUrl body:postBody];
 
-    NSLog(@"%s | serverURL: %@", __PRETTY_FUNCTION__, serverUrl);
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [manager setResponseSerializer:[AFXMLDocumentResponseSerializer serializer]];
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
