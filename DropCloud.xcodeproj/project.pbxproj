@@ -256,9 +256,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0C217A2F1927D6E100329724 /* DropCloud */ = {
+		0C217A2F1927D6E100329724 /* ownDrop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C217A611927D6E100329724 /* Build configuration list for PBXNativeTarget "DropCloud" */;
+			buildConfigurationList = 0C217A611927D6E100329724 /* Build configuration list for PBXNativeTarget "ownDrop" */;
 			buildPhases = (
 				C789BD269197423F8CE5635D /* Check Pods Manifest.lock */,
 				0C217A2C1927D6E100329724 /* Sources */,
@@ -270,7 +270,7 @@
 			);
 			dependencies = (
 			);
-			name = DropCloud;
+			name = ownDrop;
 			productName = DropCloud;
 			productReference = 0C217A301927D6E100329724 /* DropCloud.app */;
 			productType = "com.apple.product-type.application";
@@ -322,7 +322,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0C217A2F1927D6E100329724 /* DropCloud */,
+				0C217A2F1927D6E100329724 /* ownDrop */,
 				0C217A501927D6E100329724 /* DropCloudTests */,
 			);
 		};
@@ -420,7 +420,7 @@
 /* Begin PBXTargetDependency section */
 		0C217A561927D6E100329724 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0C217A2F1927D6E100329724 /* DropCloud */;
+			target = 0C217A2F1927D6E100329724 /* ownDrop */;
 			targetProxy = 0C217A551927D6E100329724 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -610,7 +610,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C217A611927D6E100329724 /* Build configuration list for PBXNativeTarget "DropCloud" */ = {
+		0C217A611927D6E100329724 /* Build configuration list for PBXNativeTarget "ownDrop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C217A621927D6E100329724 /* Debug */,
