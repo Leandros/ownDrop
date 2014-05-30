@@ -51,11 +51,15 @@
         completion:(void (^)(NSString *remoteFilePath, NSError *error))completionBlock {
 
     if (!self.baseUrl) {
-        [NSException raise:@"No BaseURL" format:@"Please specify a baseUrl"];
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = NSLocalizedString(@"nobaseurl", nil);
+        notification.informativeText = NSLocalizedString(@"nobaseurlinfo", nil);
+
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     }
 
     NSString *imagePath;
-    if (self.remoteDirectoryPath) {
+    if ([self.remoteDirectoryPath length] > 0) {
         imagePath = [NSString stringWithFormat:@"%@/%@", self.remoteDirectoryPath ?: @"", localFilePath.lastPathComponent];
     } else {
         imagePath = localFilePath.lastPathComponent;
@@ -83,7 +87,11 @@
        completion:(void (^)(NSString *url, NSError *error))completionBlock {
 
     if (!self.baseUrl) {
-        [NSException raise:@"No BaseURL" format:@"Please specify a baseUrl"];
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = NSLocalizedString(@"nobaseurl", nil);
+        notification.informativeText = NSLocalizedString(@"nobaseurlinfo", nil);
+
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     }
 
     NSString *serverUrl = [NSString stringWithFormat:@"%@%@", self.baseUrl, @"/ocs/v1.php/apps/files_sharing/api/v1/shares"];

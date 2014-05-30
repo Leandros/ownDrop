@@ -16,6 +16,8 @@
 "urlcopied" = "Die URL wurde in die Zwischenablage kopiert";
 "erroruploading" = "Hochladen fehlgeschlagen!";
 "errorsharing" = "Teilen fehlgeschlagen!";
+"nobuseurl" = "Keine Server URL eingegeben!";
+"nobaseurlinfo" = "Bitte geben sie eine server url ein";
 
 // Settings
 "serversettings" = "Server Einstellungen";
