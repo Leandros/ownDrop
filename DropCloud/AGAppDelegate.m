@@ -156,6 +156,8 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
     NSArray *fileNames = [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType];
     NSString *fileName = fileNames[0];
 
+    NSLog(@"fileDropped | fileNames: %@", fileNames);
+    NSLog(@"fileDropped | fileName: %@", fileName);
     [self.cloud uploadFile:fileName progress:^(float percentCompleted) {
         [self.statusItemView setLoading:YES];
         [self.statusItemView setProgress:percentCompleted];
@@ -175,6 +177,7 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
                     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
                 } else {
                     NSLog(@"Share Error: %@", shareError);
+
                     NSUserNotification *notification = [[NSUserNotification alloc] init];
                     notification.title = NSLocalizedString(@"errorsharing", nil);
                     notification.informativeText = shareError.localizedDescription;

@@ -51,6 +51,8 @@
         completion:(void (^)(NSString *remoteFilePath, NSError *error))completionBlock {
 
     if (!self.baseUrl) {
+        NSLog(@"%s | no baseURL", __PRETTY_FUNCTION__);
+
         NSUserNotification *notification = [[NSUserNotification alloc] init];
         notification.title = NSLocalizedString(@"nobaseurl", nil);
         notification.informativeText = NSLocalizedString(@"nobaseurlinfo", nil);
@@ -68,6 +70,7 @@
     serverUrl = [serverUrl stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     serverUrl = [serverUrl encodeString:NSUTF8StringEncoding];
 
+    NSLog(@"%s | serverUrl: %@", __PRETTY_FUNCTION__, serverUrl);
     NSURLRequest *request = [self requestWithMethod:@"PUT" url:serverUrl body:nil];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     NSProgress *progress;
@@ -87,6 +90,8 @@
        completion:(void (^)(NSString *url, NSError *error))completionBlock {
 
     if (!self.baseUrl) {
+        NSLog(@"%s | no baseURL", __PRETTY_FUNCTION__);
+
         NSUserNotification *notification = [[NSUserNotification alloc] init];
         notification.title = NSLocalizedString(@"nobaseurl", nil);
         notification.informativeText = NSLocalizedString(@"nobaseurlinfo", nil);
@@ -98,6 +103,7 @@
     NSString *postBody = [NSString stringWithFormat:@"path=%@&shareType=3", remoteFilePath];
     NSURLRequest *request = [self requestWithMethod:@"POST" url:serverUrl body:postBody];
 
+    NSLog(@"%s | serverURL: %@", __PRETTY_FUNCTION__, serverUrl);
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     [manager setResponseSerializer:[AFXMLDocumentResponseSerializer serializer]];
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
