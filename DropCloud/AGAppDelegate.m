@@ -114,6 +114,9 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
 
     self.userSettingsLabel.stringValue = NSLocalizedString(@"usersettings", nil);
     [self.usernameTextfield.cell setPlaceholderString:NSLocalizedString(@"username", nil)];
+    if ([[AGCredentials credentials].userName length] > 0) {
+        [self.usernameTextfield setStringValue:[AGCredentials credentials].userName];
+    }
     [self.passwordTextfield.cell setPlaceholderString:NSLocalizedString(@"password", nil)];
 }
 

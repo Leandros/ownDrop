@@ -12,8 +12,10 @@
 
 @end
 
-
 @implementation AGCredentials
+NSString *const kDefaultsCredentials = @"CredentialsStorage";
+NSString *const kDefaultsUsername = @"kDefaultsUsername";
+
 static AGCredentials *sharedInstance = nil;
 
 + (instancetype)credentials {
@@ -38,7 +40,16 @@ static AGCredentials *sharedInstance = nil;
 
 - (void)setName:(NSString *)name password:(NSString *)password {
     self.credentials = [self createCredentials:name password:password];
-    [[NSUserDefaults standardUserDefaults] setObject:self.credentials forKey:@"CredentialsStorage"];
+    [[NSUserDefaults standardUserDefaults] setObject:name forKey:kDefaultsUsername];
+    [[NSUserDefaults standardUserDefaults] setObject:self.credentials forKey:kDefaultsCredentials];
+}
+
+
+#pragma mark -
+#pragma mark Accessor -
+
+- (NSString *)userName {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:kDefaultsUsername];
 }
 
 
