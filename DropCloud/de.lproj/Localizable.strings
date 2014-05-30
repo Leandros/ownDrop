@@ -12,8 +12,8 @@
 "quit" = "Schließen";
 
 // Notifications
-"uploadcomplete" = "Upload erfolgreich!";
-"urlcopied" = "Die URL wurde in die Zwischenablage kopiert";
+"uploadcomplete" = "%@ hochgeladen!";
+"urlcopied" = "Der link wurde in die Zwischenablage kopiert";
 "erroruploading" = "Hochladen fehlgeschlagen!";
 "errorsharing" = "Teilen fehlgeschlagen!";
 "nobuseurl" = "Keine Server URL eingegeben!";

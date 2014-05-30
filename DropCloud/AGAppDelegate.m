@@ -169,7 +169,7 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
                     [pasteboard setString:url forType:NSStringPboardType];
 
                     NSUserNotification *notification = [[NSUserNotification alloc] init];
-                    notification.title = NSLocalizedString(@"uploadcomplete", nil);
+                    notification.title = [NSString stringWithFormat:NSLocalizedString(@"uploadcomplete", nil), fileName];
                     notification.informativeText = NSLocalizedString(@"urlcopied", nil);
 
                     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
