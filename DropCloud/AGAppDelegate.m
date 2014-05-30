@@ -88,13 +88,13 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
     [self.aboutTextfield setAllowsEditingTextAttributes:YES];
     [self.aboutTextfield setSelectable:YES];
 
-    NSURL *url = [NSURL URLWithString:@"https://github.com/leandros/dropcloud"];
+    NSURL *url = [NSURL URLWithString:@"https://github.com/leandros/owndrop"];
     NSFont *font = [NSFont fontWithName:@"HelveticaNeue-Light" size:13];
     NSDictionary *attr = @{
             NSFontAttributeName : font
     };
     NSMutableAttributedString *aboutString = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"abouttext", nil) attributes:attr];
-    [aboutString appendAttributedString:[NSAttributedString hyperlinkFromString:@"https://GitHub.com/Leandros/DropCloud" withURL:url attributes:attr]];
+    [aboutString appendAttributedString:[NSAttributedString hyperlinkFromString:@"https://GitHub.com/Leandros/ownDrop" withURL:url attributes:attr]];
     [aboutString appendAttributedString:[[NSAttributedString alloc] initWithString:@")" attributes:attr]];
     self.aboutTextfield.attributedStringValue = aboutString;
 
