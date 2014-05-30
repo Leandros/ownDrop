@@ -88,13 +88,13 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
     [self.aboutTextfield setAllowsEditingTextAttributes:YES];
     [self.aboutTextfield setSelectable:YES];
 
-    NSURL *url = [NSURL URLWithString:@"https://github.com/leandros/dropcloud"];
+    NSURL *url = [NSURL URLWithString:@"https://github.com/leandros/owndrop"];
     NSFont *font = [NSFont fontWithName:@"HelveticaNeue-Light" size:13];
     NSDictionary *attr = @{
             NSFontAttributeName : font
     };
     NSMutableAttributedString *aboutString = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"abouttext", nil) attributes:attr];
-    [aboutString appendAttributedString:[NSAttributedString hyperlinkFromString:@"https://GitHub.com/Leandros/DropCloud" withURL:url attributes:attr]];
+    [aboutString appendAttributedString:[NSAttributedString hyperlinkFromString:@"https://GitHub.com/Leandros/ownDrop" withURL:url attributes:attr]];
     [aboutString appendAttributedString:[[NSAttributedString alloc] initWithString:@")" attributes:attr]];
     self.aboutTextfield.attributedStringValue = aboutString;
 
@@ -114,6 +114,9 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
 
     self.userSettingsLabel.stringValue = NSLocalizedString(@"usersettings", nil);
     [self.usernameTextfield.cell setPlaceholderString:NSLocalizedString(@"username", nil)];
+    if ([[AGCredentials credentials].userName length] > 0) {
+        [self.usernameTextfield setStringValue:[AGCredentials credentials].userName];
+    }
     [self.passwordTextfield.cell setPlaceholderString:NSLocalizedString(@"password", nil)];
 }
 
@@ -166,12 +169,13 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
                     [pasteboard setString:url forType:NSStringPboardType];
 
                     NSUserNotification *notification = [[NSUserNotification alloc] init];
-                    notification.title = NSLocalizedString(@"uploadcomplete", nil);
+                    notification.title = [NSString stringWithFormat:NSLocalizedString(@"uploadcomplete", nil), fileName.lastPathComponent];
                     notification.informativeText = NSLocalizedString(@"urlcopied", nil);
 
                     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
                 } else {
                     NSLog(@"Share Error: %@", shareError);
+
                     NSUserNotification *notification = [[NSUserNotification alloc] init];
                     notification.title = NSLocalizedString(@"errorsharing", nil);
                     notification.informativeText = shareError.localizedDescription;

@@ -9,6 +9,7 @@
 @interface AGCredentials : NSObject
 
 @property (nonatomic, strong, readonly) NSString *credentials;
+@property (nonatomic, strong, readonly) NSString *userName;
 
 + (instancetype)credentials;
 

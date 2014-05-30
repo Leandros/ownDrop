@@ -12,10 +12,12 @@
 "quit" = "Quit";
 
 // Notifications
-"uploadcomplete" = "Upload complete!";
-"urlcopied" = "The URL has been copied to the clipboard";
+"uploadcomplete" = "%@ uploaded!";
+"urlcopied" = "The link has been copied to the clipboard";
 "erroruploading" = "Uploading failed!";
 "errorsharing" = "Sharing failed!";
+"nobuseurl" = "No BaseURL entered!";
+"nobaseurlinfo" = "Please enter a base url in the settings";
 
 // Settings
 "serversettings" = "Server Settings";
