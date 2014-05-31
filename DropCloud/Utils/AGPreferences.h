@@ -15,5 +15,7 @@
 
 #pragma mark - Properties -
 @property (nonatomic, assign) BOOL allowSelfSignedSSLCerts;
+@property (nonatomic, strong) NSString *baseURL;
+@property (nonatomic, strong) NSString *remoteDirectoryPath;
 
 @end
