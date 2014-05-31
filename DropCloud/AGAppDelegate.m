@@ -56,17 +56,6 @@
 
 @implementation AGAppDelegate
 
-NSString *const kPrefServerUrl = @"kPrefServerUrl";
-NSString *const kPrefServerPath = @"kPrefServerPath";
-
-+ (void)initialize {
-    [[NSUserDefaults standardUserDefaults] registerDefaults:@{
-            kPrefServerUrl : @"",
-            kPrefServerPath : @"",
-            @"CredentialsStorage" : @""
-    }];
-}
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Init.
 }
@@ -81,8 +70,8 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
     self.statusItem.view = self.statusItemView;
 
     self.cloud = [AGCloudCommunication sharedManager];
-    self.cloud.baseUrl = [[NSUserDefaults standardUserDefaults] stringForKey:kPrefServerUrl];
-    self.cloud.remoteDirectoryPath = [[NSUserDefaults standardUserDefaults] stringForKey:kPrefServerPath];
+    self.cloud.baseUrl = [AGPreferences sharedInstance].baseURL;
+    self.cloud.remoteDirectoryPath = [AGPreferences sharedInstance].remoteDirectoryPath;
 
     self.serverUrlTextfield.stringValue = self.cloud.baseUrl;
     self.serverPathTextfield.stringValue = self.cloud.remoteDirectoryPath;
@@ -152,8 +141,8 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
 }
 
 - (IBAction)saveAction:(id)sender {
-    [[NSUserDefaults standardUserDefaults] setObject:self.serverUrlTextfield.stringValue forKey:kPrefServerUrl];
-    [[NSUserDefaults standardUserDefaults] setObject:self.serverPathTextfield.stringValue forKey:kPrefServerPath];
+    [AGPreferences sharedInstance].baseURL = self.serverUrlTextfield.stringValue;
+    [AGPreferences sharedInstance].remoteDirectoryPath = self.serverPathTextfield.stringValue;
     if (self.usernameTextfield.stringValue.length > 0 && self.passwordTextfield.stringValue.length > 0) {
         [[AGCredentials credentials] setName:self.usernameTextfield.stringValue password:self.passwordTextfield.stringValue];
     }
@@ -163,6 +152,12 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
     } else if (self.selfSignedCertsCheckbox.state == NSOffState) {
         [AGPreferences sharedInstance].allowSelfSignedSSLCerts = NO;
     }
+
+    // Update cloud.
+    self.cloud.baseUrl = [AGPreferences sharedInstance].baseURL;
+    self.cloud.remoteDirectoryPath = [AGPreferences sharedInstance].remoteDirectoryPath;
+    self.cloud.allowSelfSignedCerts = [AGPreferences sharedInstance].allowSelfSignedSSLCerts;
+
     [self.window close];
 }
 
@@ -174,7 +169,6 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
     NSArray *fileNames = [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType];
     NSString *fileName = fileNames[0];
 
-    self.cloud.allowSelfSignedCerts = [AGPreferences sharedInstance].allowSelfSignedSSLCerts;
     [self.cloud uploadFile:fileName progress:^(float percentCompleted) {
         [self.statusItemView setLoading:YES];
         [self.statusItemView setProgress:percentCompleted];
