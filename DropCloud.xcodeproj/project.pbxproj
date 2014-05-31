@@ -283,9 +283,9 @@
 			productReference = 0C217A301927D6E100329724 /* DropCloud.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0C217A501927D6E100329724 /* DropCloudTests */ = {
+		0C217A501927D6E100329724 /* ownDropTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C217A641927D6E100329724 /* Build configuration list for PBXNativeTarget "DropCloudTests" */;
+			buildConfigurationList = 0C217A641927D6E100329724 /* Build configuration list for PBXNativeTarget "ownDropTests" */;
 			buildPhases = (
 				0C217A4D1927D6E100329724 /* Sources */,
 				0C217A4E1927D6E100329724 /* Frameworks */,
@@ -296,7 +296,7 @@
 			dependencies = (
 				0C217A561927D6E100329724 /* PBXTargetDependency */,
 			);
-			name = DropCloudTests;
+			name = ownDropTests;
 			productName = DropCloudTests;
 			productReference = 0C217A511927D6E100329724 /* DropCloudTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -331,7 +331,7 @@
 			projectRoot = "";
 			targets = (
 				0C217A2F1927D6E100329724 /* ownDrop */,
-				0C217A501927D6E100329724 /* DropCloudTests */,
+				0C217A501927D6E100329724 /* ownDropTests */,
 			);
 		};
 /* End PBXProject section */
@@ -627,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C217A641927D6E100329724 /* Build configuration list for PBXNativeTarget "DropCloudTests" */ = {
+		0C217A641927D6E100329724 /* Build configuration list for PBXNativeTarget "ownDropTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C217A651927D6E100329724 /* Debug */,
