@@ -24,6 +24,7 @@
 "serversettings" = "Server Einstellungen";
 "serverurl" = "Server URL";
 "serverpath" = "Pfad (leer lassen für root verzeichnis)";
+"allowselfsignedcerts" = "Erlaube selbst signierte SSL Zertifikate";
 "usersettings" = "Benutzer Einstellungen";
 "username" = "Benutzername";
 "password" = "Passwort";

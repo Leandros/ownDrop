@@ -20,6 +20,7 @@
 		0C217A721928C18E00329724 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A711928C18E00329724 /* MainMenu.xib */; };
 		0CEB85241938BD230052BDEC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB85231938BD230052BDEC /* Security.framework */; };
 		0CEB85261938BD2A0052BDEC /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB85251938BD2A0052BDEC /* CoreServices.framework */; };
+		0CEB852919399EFB0052BDEC /* AGPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB852819399EFB0052BDEC /* AGPreferences.m */; };
 		444AF4DB96574B6AA4E45D6D /* libPods-DropCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB48C48D41B4576850FC035 /* libPods-DropCloud.a */; };
 		5D97A10FE5E2EA54463FE038 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A4FD322B22A9B186B9D4 /* NSData+Base64.m */; };
 		5D97A2C25749B53681D43600 /* menubar_icon_inverse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D97AC93B1F6BF6ED9E87A4B /* menubar_icon_inverse@2x.png */; };
@@ -72,6 +73,8 @@
 		0C217A711928C18E00329724 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		0CEB85231938BD230052BDEC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0CEB85251938BD2A0052BDEC /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		0CEB852719399EFB0052BDEC /* AGPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPreferences.h; sourceTree = "<group>"; };
+		0CEB852819399EFB0052BDEC /* AGPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPreferences.m; sourceTree = "<group>"; };
 		4CB48C48D41B4576850FC035 /* libPods-DropCloud.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropCloud.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D97A1CAEC7E4651C898BCE7 /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
 		5D97A2419202F10394ED8E30 /* AGCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCredentials.h; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 				5D97A30ACE3F219E4D1AAAC8 /* NSString+Encode.m */,
 				5D97A1CAEC7E4651C898BCE7 /* NSAttributedString+Hyperlink.m */,
 				5D97A77550963DC5AB841758 /* NSAttributedString+Hyperlink.h */,
+				0CEB852719399EFB0052BDEC /* AGPreferences.h */,
+				0CEB852819399EFB0052BDEC /* AGPreferences.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 			files = (
 				0C217A471927D6E100329724 /* AGAppDelegate.m in Sources */,
 				0C217A401927D6E100329724 /* main.m in Sources */,
+				0CEB852919399EFB0052BDEC /* AGPreferences.m in Sources */,
 				5D97A10FE5E2EA54463FE038 /* NSData+Base64.m in Sources */,
 				5D97AC2549018989F52ECDAF /* NSString+Encode.m in Sources */,
 				5D97A9DF30105BCF6634BF0C /* AGCloudCommunication.m in Sources */,

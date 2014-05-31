@@ -13,6 +13,7 @@
 #pragma mark - Properties -
 @property (nonatomic, strong) NSString *baseUrl;
 @property (nonatomic, strong) NSString *remoteDirectoryPath;
+@property (nonatomic, assign) BOOL allowSelfSignedCerts;
 
 #pragma mark - Initialization -
 + (id)sharedManager;

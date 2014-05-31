@@ -21,6 +21,7 @@
                 <outlet property="passwordTextfield" destination="yO7-HK-p95" id="19t-oE-Gy1"/>
                 <outlet property="quitMenuItem" destination="mGF-w2-xCe" id="OXO-Zt-Ss1"/>
                 <outlet property="saveButton" destination="ZMn-RX-4wu" id="I1K-2u-FTt"/>
+                <outlet property="selfSignedCertsCheckbox" destination="dX7-6y-Tfc" id="wZt-LT-yWd"/>
                 <outlet property="serverPathTextfield" destination="aNB-c5-gDP" id="XvS-mC-OD5"/>
                 <outlet property="serverSettingsLabel" destination="3Az-wc-iMG" id="aCu-FI-S5q"/>
                 <outlet property="serverUrlTextfield" destination="87u-6L-cVJ" id="TvK-XN-0jg"/>
@@ -137,6 +138,14 @@
                             </allowedInputSourceLocales>
                         </secureTextFieldCell>
                     </secureTextField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dX7-6y-Tfc">
+                        <rect key="frame" x="20" y="171" width="242" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Allow self-signed SSL certificates" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Q0L-0Z-nLX">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
                 </subviews>
             </view>
         </window>

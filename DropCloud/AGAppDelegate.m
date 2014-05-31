@@ -12,6 +12,7 @@
 #import "AGCredentials.h"
 #import "NSAttributedString+Hyperlink.h"
 #import "AGLoadingStatusItemView.h"
+#import "AGPreferences.h"
 
 @interface AGAppDelegate ()
 
@@ -30,6 +31,7 @@
 @property (weak) IBOutlet NSTextField *serverSettingsLabel;
 @property (weak) IBOutlet NSTextField *serverUrlTextfield;
 @property (weak) IBOutlet NSTextField *serverPathTextfield;
+@property (weak) IBOutlet NSButton *selfSignedCertsCheckbox;
 
 @property (weak) IBOutlet NSTextField *userSettingsLabel;
 @property (weak) IBOutlet NSTextField *usernameTextfield;
@@ -127,6 +129,8 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
 
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     }
+
+    self.selfSignedCertsCheckbox.state = [AGPreferences sharedInstance].allowSelfSignedSSLCerts ? NSOnState : NSOffState;
 }
 
 
@@ -154,6 +158,11 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
         [[AGCredentials credentials] setName:self.usernameTextfield.stringValue password:self.passwordTextfield.stringValue];
     }
 
+    if (self.selfSignedCertsCheckbox.state == NSOnState) {
+        [AGPreferences sharedInstance].allowSelfSignedSSLCerts = YES;
+    } else if (self.selfSignedCertsCheckbox.state == NSOffState) {
+        [AGPreferences sharedInstance].allowSelfSignedSSLCerts = NO;
+    }
     [self.window close];
 }
 
@@ -165,6 +174,7 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
     NSArray *fileNames = [[sender draggingPasteboard] propertyListForType:NSFilenamesPboardType];
     NSString *fileName = fileNames[0];
 
+    self.cloud.allowSelfSignedCerts = [AGPreferences sharedInstance].allowSelfSignedSSLCerts;
     [self.cloud uploadFile:fileName progress:^(float percentCompleted) {
         [self.statusItemView setLoading:YES];
         [self.statusItemView setProgress:percentCompleted];
