@@ -5,8 +5,11 @@
 
 #import "AGCredentials.h"
 #import "NSData+Base64.h"
-#import <Security/Security.h>
-#import <CoreServices/CoreServices.h>
+
+#pragma mark - Keychain -
+OSStatus storePasswordKeychain(void *user, void *password, UInt32 passwordLength);
+OSStatus changePasswordKeychain(void *password, SecKeychainItemRef itemRef);
+OSStatus getPasswordKeychain(void *user, void **passwordData, UInt32 *passwordLength, SecKeychainItemRef *itemRef);
 
 @interface AGCredentials ()
 @end
@@ -42,7 +45,7 @@ static AGCredentials *sharedInstance = nil;
         changePasswordKeychain((void *) password.UTF8String, itemRef);
 
     } else if (status == errSecItemNotFound) {
-        status = storePasswordKeychain((void *) name.UTF8String, (void *) password.UTF8String, (UInt32) password.length);
+        storePasswordKeychain((void *) name.UTF8String, (void *) password.UTF8String, (UInt32) password.length);
     }
 
     if (itemRef) {
@@ -104,45 +107,45 @@ static AGCredentials *sharedInstance = nil;
 #pragma mark -
 #pragma mark Keychain -
 
-OSStatus storePasswordKeychain (void *user, void *password, UInt32 passwordLength) {
+OSStatus storePasswordKeychain(void *user, void *password, UInt32 passwordLength) {
     OSStatus status;
-    status = SecKeychainAddGenericPassword (
-                                            NULL,            // default keychain
-                                            7,              // length of service name
-                                            "ownDrop",    // service name
-                                            (UInt32) strlen(user),              // length of account name
-                                            user,    // account name
-                                            passwordLength,  // length of password
-                                            password,        // pointer to password data
-                                            NULL             // the item reference
-                                            );
+    status = SecKeychainAddGenericPassword(
+            NULL,
+            7,
+            "ownDrop",
+            (UInt32) strlen(user),
+            user,
+            passwordLength,
+            password,
+            NULL
+    );
     return (status);
 }
 
 
-OSStatus getPasswordKeychain (void *user, void **passwordData, UInt32 *passwordLength, SecKeychainItemRef *itemRef) {
+OSStatus getPasswordKeychain(void *user, void **passwordData, UInt32 *passwordLength, SecKeychainItemRef *itemRef) {
     OSStatus status;
-    status = SecKeychainFindGenericPassword (
-                                              NULL,           // default keychain
-                                              7,             // length of service name
-                                              "ownDrop",   // service name
-                                              (UInt32) strlen(user),             // length of account name
-                                              user,   // account name
-                                              passwordLength,  // length of password
-                                              passwordData,   // pointer to password data
-                                              itemRef         // the item reference
-                                              );
+    status = SecKeychainFindGenericPassword(
+            NULL,
+            7,
+            "ownDrop",
+            (UInt32) strlen(user),
+            user,
+            passwordLength,
+            passwordData,
+            itemRef
+    );
     return (status);
 }
 
-OSStatus changePasswordKeychain (void *password, SecKeychainItemRef itemRef) {
+OSStatus changePasswordKeychain(void *password, SecKeychainItemRef itemRef) {
     OSStatus status;
-    status = SecKeychainItemModifyAttributesAndData (
-                                                     itemRef,         // the item reference
-                                                     NULL,            // no change to attributes
-                                                     (UInt32) strlen(password),  // length of password
-                                                     password         // pointer to password data
-                                                     );
+    status = SecKeychainItemModifyAttributesAndData(
+            itemRef,
+            NULL,
+            (UInt32) strlen(password),
+            password
+    );
     return (status);
 }
 
