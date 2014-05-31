@@ -21,7 +21,8 @@
 		0CEB85241938BD230052BDEC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB85231938BD230052BDEC /* Security.framework */; };
 		0CEB85261938BD2A0052BDEC /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB85251938BD2A0052BDEC /* CoreServices.framework */; };
 		0CEB852919399EFB0052BDEC /* AGPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB852819399EFB0052BDEC /* AGPreferences.m */; };
-		444AF4DB96574B6AA4E45D6D /* libPods-DropCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB48C48D41B4576850FC035 /* libPods-DropCloud.a */; };
+		0CEB852B193A4AE80052BDEC /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 0CEB852A193A4AE80052BDEC /* dsa_pub.pem */; };
+		5D2A9AECBBAC44B4A3621322 /* libPods-ownDrop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D98A3BBF60402A8E60EA87 /* libPods-ownDrop.a */; };
 		5D97A10FE5E2EA54463FE038 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A4FD322B22A9B186B9D4 /* NSData+Base64.m */; };
 		5D97A2C25749B53681D43600 /* menubar_icon_inverse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D97AC93B1F6BF6ED9E87A4B /* menubar_icon_inverse@2x.png */; };
 		5D97A317B53CE30592C673DD /* AGLoadingStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AC8E88A78E90FF8FF6F9 /* AGLoadingStatusItemView.m */; };
@@ -49,7 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C217A301927D6E100329724 /* DropCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = DropCloud.app; path = ownDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C217A301927D6E100329724 /* ownDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ownDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C217A331927D6E100329724 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0C217A361927D6E100329724 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		0C217A371927D6E100329724 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -61,7 +62,7 @@
 		0C217A451927D6E100329724 /* AGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
 		0C217A461927D6E100329724 /* AGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
 		0C217A4B1927D6E100329724 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0C217A511927D6E100329724 /* DropCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C217A511927D6E100329724 /* DropCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DropCloudTests.xctest; path = ownDropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C217A521927D6E100329724 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0C217A591927D6E100329724 /* DropCloudTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropCloudTests-Info.plist"; sourceTree = "<group>"; };
 		0C217A5B1927D6E100329724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		0CEB85251938BD2A0052BDEC /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		0CEB852719399EFB0052BDEC /* AGPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPreferences.h; sourceTree = "<group>"; };
 		0CEB852819399EFB0052BDEC /* AGPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPreferences.m; sourceTree = "<group>"; };
+		0CEB852A193A4AE80052BDEC /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		4CB48C48D41B4576850FC035 /* libPods-DropCloud.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DropCloud.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D97A1CAEC7E4651C898BCE7 /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
 		5D97A2419202F10394ED8E30 /* AGCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCredentials.h; sourceTree = "<group>"; };
@@ -98,6 +100,8 @@
 		5D97AC93B1F6BF6ED9E87A4B /* menubar_icon_inverse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar_icon_inverse@2x.png"; sourceTree = "<group>"; };
 		5D97AF6B692E231B194D35B4 /* menubar_icon_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubar_icon_empty.png; sourceTree = "<group>"; };
 		5D97AFDF91A68F6B6E0A6E0F /* AGCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCredentials.m; sourceTree = "<group>"; };
+		898E507C07514F19BC5B5E18 /* Pods-ownDrop.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ownDrop.xcconfig"; path = "Pods/Pods-ownDrop.xcconfig"; sourceTree = "<group>"; };
+		B3D98A3BBF60402A8E60EA87 /* libPods-ownDrop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ownDrop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CB270FC94A4A43A2787545 /* Pods-DropCloud.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DropCloud.xcconfig"; path = "Pods/Pods-DropCloud.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +113,7 @@
 				0CEB85261938BD2A0052BDEC /* CoreServices.framework in Frameworks */,
 				0CEB85241938BD230052BDEC /* Security.framework in Frameworks */,
 				0C217A341927D6E100329724 /* Cocoa.framework in Frameworks */,
-				444AF4DB96574B6AA4E45D6D /* libPods-DropCloud.a in Frameworks */,
+				5D2A9AECBBAC44B4A3621322 /* libPods-ownDrop.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,13 +137,14 @@
 				0C217A321927D6E100329724 /* Frameworks */,
 				0C217A311927D6E100329724 /* Products */,
 				B5CB270FC94A4A43A2787545 /* Pods-DropCloud.xcconfig */,
+				898E507C07514F19BC5B5E18 /* Pods-ownDrop.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		0C217A311927D6E100329724 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C217A301927D6E100329724 /* DropCloud.app */,
+				0C217A301927D6E100329724 /* ownDrop.app */,
 				0C217A511927D6E100329724 /* DropCloudTests.xctest */,
 			);
 			name = Products;
@@ -154,6 +159,7 @@
 				0C217A521927D6E100329724 /* XCTest.framework */,
 				0C217A351927D6E100329724 /* Other Frameworks */,
 				4CB48C48D41B4576850FC035 /* libPods-DropCloud.a */,
+				B3D98A3BBF60402A8E60EA87 /* libPods-ownDrop.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -228,6 +234,7 @@
 		5D97ABE8391671C2BF98AD6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0CEB852A193A4AE80052BDEC /* dsa_pub.pem */,
 				5D97AF6B692E231B194D35B4 /* menubar_icon_empty.png */,
 				5D97A88DD39E72C969A16546 /* menubar_icon_empty@2x.png */,
 				5D97AA442EF15F3DF7A20D8D /* menubar_icon@2x.png */,
@@ -285,7 +292,7 @@
 			);
 			name = ownDrop;
 			productName = DropCloud;
-			productReference = 0C217A301927D6E100329724 /* DropCloud.app */;
+			productReference = 0C217A301927D6E100329724 /* ownDrop.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0C217A501927D6E100329724 /* ownDropTests */ = {
@@ -354,6 +361,7 @@
 				5D97A5707F5F3A285CB19361 /* menubar_icon_empty@2x.png in Resources */,
 				5D97A5627DA0B3C37C1B60E7 /* menubar_icon@2x.png in Resources */,
 				5D97A2C25749B53681D43600 /* menubar_icon_inverse@2x.png in Resources */,
+				0CEB852B193A4AE80052BDEC /* dsa_pub.pem in Resources */,
 				5D97A54BAD278D107BC9AAA1 /* menubar_icon.png in Resources */,
 				5D97AC15E5C18633408D4C35 /* menubar_icon_inverse.png in Resources */,
 			);
@@ -397,7 +405,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-DropCloud-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-ownDrop-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -542,7 +550,7 @@
 		};
 		0C217A621927D6E100329724 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5CB270FC94A4A43A2787545 /* Pods-DropCloud.xcconfig */;
+			baseConfigurationReference = 898E507C07514F19BC5B5E18 /* Pods-ownDrop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -558,7 +566,7 @@
 		};
 		0C217A631927D6E100329724 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5CB270FC94A4A43A2787545 /* Pods-DropCloud.xcconfig */;
+			baseConfigurationReference = 898E507C07514F19BC5B5E18 /* Pods-ownDrop.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;

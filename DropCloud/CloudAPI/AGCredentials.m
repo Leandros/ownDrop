@@ -23,6 +23,9 @@ static AGCredentials *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"CredentialsStorage"] length] > 0) {
+            [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"CredentialsStorage"];
+        }
     });
 
     return sharedInstance;

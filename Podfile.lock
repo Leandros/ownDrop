@@ -15,14 +15,17 @@ PODS:
   - AFNetworking/Reachability (2.2.4)
   - AFNetworking/Security (2.2.4)
   - AFNetworking/Serialization (2.2.4)
-  - Ono (1.0.0)
+  - Ono (1.0.1)
+  - Sparkle-pornel (1.6.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2)
-  - Ono
+  - Ono (~> 1.0.0)
+  - Sparkle-pornel (~> 1.6)
 
 SPEC CHECKSUMS:
-  AFNetworking: 01aa7c3aa9a200b94943e54072a4373f14b3d219
-  Ono: fd233bd26396e1f25a5102427c887a97914735f3
+  AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  Ono: 56b64b266667f012bce9885f7764bf65b84f027a
+  Sparkle-pornel: dfb419ba2135a0b7e9c686c566eeb4abb5af2df1
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1

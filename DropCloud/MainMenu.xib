@@ -33,6 +33,7 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="9aF-HF-VUI" customClass="SUUpdater"/>
         <menu id="gjI-GA-vII">
             <items>
                 <menuItem title="Settings" id="WlY-HH-MJ7">
