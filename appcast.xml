@@ -20,5 +20,12 @@
             <sparkle:releaseNotesLink>https://raw.githubusercontent.com/Leandros/ownDrop/master/Changelog/v0.5.1.html</sparkle:releaseNotesLink>
             <enclosure url="https://github.com/Leandros/ownDrop/releases/download/0.5.1/ownDrop-0.5.1.zip" sparkle:version="0.5.1" length="1129088" type="application/octet-stream" sparkle:dsaSignature="MCwCFBZ6uGffbU3qffSKhqbO1pXojiVnAhQgCcDurQzy20joYivWNJEGbi0Ecw==" />
         </item>
+        <item>
+            <title>Version 0.5.2</title>
+            <description></description>
+            <pubDate>Sat, 31 May 2014 21:15:00 +0200</pubDate>
+            <sparkle:releaseNotesLink>https://raw.githubusercontent.com/Leandros/ownDrop/master/Changelog/v0.5.1.html</sparkle:releaseNotesLink>
+            <enclosure url="https://github.com/Leandros/ownDrop/releases/download/0.5.2/ownDrop-0.5.2.zip" sparkle:version="0.5.2" length="1129503" type="application/octet-stream" sparkle:dsaSignature="MCwCFEE/Eyq47mBVcm2XP68iqXola9qUAhRYZopgd9r0gVWStYy7zS79o7PRjg==" />
+        </item>
    </channel>
 </rss>
