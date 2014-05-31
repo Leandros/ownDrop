@@ -10,6 +10,7 @@
 
 @property (nonatomic, strong, readonly) NSString *credentials;
 @property (nonatomic, strong, readonly) NSString *userName;
+@property (nonatomic, strong, readonly) NSString *password;
 
 + (instancetype)credentials;
 

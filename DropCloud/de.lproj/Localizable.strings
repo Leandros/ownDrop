@@ -18,11 +18,13 @@
 "errorsharing" = "Teilen fehlgeschlagen!";
 "nobuseurl" = "Keine Server URL eingegeben!";
 "nobaseurlinfo" = "Bitte geben sie eine server url ein";
+"enterpassword" = "Bitte geben sie ihr Passwort ein!";
 
 // Settings
 "serversettings" = "Server Einstellungen";
 "serverurl" = "Server URL";
 "serverpath" = "Pfad (leer lassen für root verzeichnis)";
+"allowselfsignedcerts" = "Erlaube selbst signierte SSL Zertifikate";
 "usersettings" = "Benutzer Einstellungen";
 "username" = "Benutzername";
 "password" = "Passwort";

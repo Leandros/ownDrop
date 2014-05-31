@@ -1,11 +1,12 @@
-platform :osx, "10.9"
+platform :osx, "10.8"
 
-target "DropCloud" do
+target "ownDrop" do
     pod 'AFNetworking', '~> 2'
-    pod 'Ono'
+    pod 'Ono', '~> 1.0.0'
+    pod 'Sparkle-pornel', '~> 1.6'
 end
 
-target "DropCloudTests" do
+target "ownDropTests" do
 
 end
 

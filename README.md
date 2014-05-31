@@ -6,7 +6,7 @@ Your private one-click uploader for [ownCloud](https://owncloud.org/), built on 
 
 
 ### Installation
-Download the current version [here](https://github.com/Leandros/ownDrop/releases/download/0.2.0/ownDrop.zip). Unzip the file, move `DropCloud.app` to the `Application` folder and start it.
+Download the current version [here](https://github.com/Leandros/ownDrop/releases/download/0.3.0/ownDrop-0.3.0.zip). Unzip the file, move `ownDrop.app` to the `Application` folder and start it.
 
 Before first use you have to fill in your **ownCloud** server and your credentials. Just click on the icon in the menu bar and go to the settings. Below you can see an example:
 

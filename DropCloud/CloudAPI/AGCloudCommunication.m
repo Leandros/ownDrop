@@ -72,6 +72,7 @@
 
     NSURLRequest *request = [self requestWithMethod:@"PUT" url:serverUrl body:nil];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    manager.securityPolicy.allowInvalidCertificates = self.allowSelfSignedCerts;
     NSProgress *progress;
     NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request
                                                                fromFile:[NSURL fileURLWithPath:localFilePath]
@@ -103,6 +104,7 @@
     NSURLRequest *request = [self requestWithMethod:@"POST" url:serverUrl body:postBody];
 
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    manager.securityPolicy.allowInvalidCertificates = self.allowSelfSignedCerts;
     [manager setResponseSerializer:[AFXMLDocumentResponseSerializer serializer]];
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         NSString *url;

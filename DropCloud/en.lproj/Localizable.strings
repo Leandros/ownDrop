@@ -18,11 +18,13 @@
 "errorsharing" = "Sharing failed!";
 "nobuseurl" = "No BaseURL entered!";
 "nobaseurlinfo" = "Please enter a base url in the settings";
+"enterpassword" = "Please enter your password!";
 
 // Settings
 "serversettings" = "Server Settings";
 "serverurl" = "Server URL";
 "serverpath" = "Path (leave empty for root directory)";
+"allowselfsignedcerts" = "Allow self-signed SSL certificates";
 "usersettings" = "User Settings";
 "username" = "Username";
 "password" = "Password";
