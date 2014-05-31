@@ -18,6 +18,7 @@
 "errorsharing" = "Sharing failed!";
 "nobuseurl" = "No BaseURL entered!";
 "nobaseurlinfo" = "Please enter a base url in the settings";
+"enterpassword" = "Please enter your password!";
 
 // Settings
 "serversettings" = "Server Settings";

@@ -118,6 +118,15 @@ NSString *const kPrefServerPath = @"kPrefServerPath";
         [self.usernameTextfield setStringValue:[AGCredentials credentials].userName];
     }
     [self.passwordTextfield.cell setPlaceholderString:NSLocalizedString(@"password", nil)];
+    // Shows the Keychain unlock dialog.
+    if ([[AGCredentials credentials].password length] > 0) {
+        [self.passwordTextfield setStringValue:[AGCredentials credentials].password];
+    } else {
+        NSUserNotification *notification = [[NSUserNotification alloc] init];
+        notification.title = NSLocalizedString(@"enterpassword", nil);
+
+        [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+    }
 }
 
 

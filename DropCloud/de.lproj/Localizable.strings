@@ -18,6 +18,7 @@
 "errorsharing" = "Teilen fehlgeschlagen!";
 "nobuseurl" = "Keine Server URL eingegeben!";
 "nobaseurlinfo" = "Bitte geben sie eine server url ein";
+"enterpassword" = "Bitte geben sie ihr Passwort ein!";
 
 // Settings
 "serversettings" = "Server Einstellungen";
