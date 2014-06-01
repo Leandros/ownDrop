@@ -27,6 +27,7 @@
                 <outlet property="serverUrlTextfield" destination="87u-6L-cVJ" id="TvK-XN-0jg"/>
                 <outlet property="settingsMenuItem" destination="WlY-HH-MJ7" id="Dzb-IQ-sRY"/>
                 <outlet property="statusMenu" destination="gjI-GA-vII" id="Vey-c2-EnM"/>
+                <outlet property="updatesButton" destination="dkU-wz-hk2" id="RyW-Dz-mbJ"/>
                 <outlet property="userSettingsLabel" destination="dd4-za-7Fw" id="lVU-6d-hPU"/>
                 <outlet property="usernameTextfield" destination="tPF-0Q-tb5" id="CaD-zy-JHn"/>
                 <outlet property="window" destination="T4a-hj-8ve" id="OFd-hk-beo"/>
@@ -198,6 +199,17 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dkU-wz-hk2">
+                        <rect key="frame" x="11" y="8" width="212" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Check for Updates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MB5-oB-PHY">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="checkForUpdates:" target="9aF-HF-VUI" id="IHD-ee-NPL"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
         </window>

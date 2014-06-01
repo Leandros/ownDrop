@@ -44,6 +44,7 @@
 @property (unsafe_unretained) IBOutlet NSWindow *aboutWindow;
 @property (weak) IBOutlet NSTextField *developedByLabel;
 @property (weak) IBOutlet NSTextField *aboutTextfield;
+@property (weak) IBOutlet NSButton *updatesButton;
 
 
 #pragma mark Actions
@@ -94,6 +95,7 @@
             NSFontAttributeName : boldFont
     };
     self.developedByLabel.attributedStringValue = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"developedby", nil) attributes:boldAttr];
+    [self.updatesButton setTitle:NSLocalizedString(@"checkforupdates", nil)];
 
     self.settingsMenuItem.title = NSLocalizedString(@"settings", nil);
     self.aboutMenuItem.title = NSLocalizedString(@"about", nil);
