@@ -23,7 +23,7 @@
 		0CEB852919399EFB0052BDEC /* AGPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB852819399EFB0052BDEC /* AGPreferences.m */; };
 		0CEB852B193A4AE80052BDEC /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 0CEB852A193A4AE80052BDEC /* dsa_pub.pem */; };
 		5D2A9AECBBAC44B4A3621322 /* libPods-ownDrop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D98A3BBF60402A8E60EA87 /* libPods-ownDrop.a */; };
-		5D97A10FE5E2EA54463FE038 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A4FD322B22A9B186B9D4 /* NSData+Base64.m */; };
+		5D97A10FE5E2EA54463FE038 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97A4FD322B22A9B186B9D4 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		5D97A2C25749B53681D43600 /* menubar_icon_inverse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D97AC93B1F6BF6ED9E87A4B /* menubar_icon_inverse@2x.png */; };
 		5D97A317B53CE30592C673DD /* AGLoadingStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AC8E88A78E90FF8FF6F9 /* AGLoadingStatusItemView.m */; };
 		5D97A4F52DA5543D781DDCE1 /* AGLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AC24E0582E5F63ADC05F /* AGLoadingView.m */; };
