@@ -61,7 +61,6 @@
 @end
 
 @implementation AGAppDelegate
-static NSString *const kAGDropKey = @"kAGDropKey";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Init.
@@ -81,8 +80,8 @@ static NSString *const kAGDropKey = @"kAGDropKey";
     self.cloud.baseUrl = [AGPreferences sharedInstance].baseURL;
     self.cloud.remoteDirectoryPath = [AGPreferences sharedInstance].remoteDirectoryPath;
 
-    self.serverUrlTextfield.stringValue = self.cloud.baseUrl;
-    self.serverPathTextfield.stringValue = self.cloud.remoteDirectoryPath;
+    self.serverUrlTextfield.stringValue = self.cloud.baseUrl ?: @"";
+    self.serverPathTextfield.stringValue = self.cloud.remoteDirectoryPath ?: @"";
 
     [self.aboutTextfield setAllowsEditingTextAttributes:YES];
     [self.aboutTextfield setSelectable:YES];
@@ -117,6 +116,7 @@ static NSString *const kAGDropKey = @"kAGDropKey";
         [self.statusMenu insertItem:item atIndex:count - index];
         index--;
     }
+
     self.settingsMenuItem.title = NSLocalizedString(@"settings", nil);
     self.aboutMenuItem.title = NSLocalizedString(@"about", nil);
     self.quitMenuItem.title = NSLocalizedString(@"quit", nil);
@@ -127,13 +127,13 @@ static NSString *const kAGDropKey = @"kAGDropKey";
 
     self.userSettingsLabel.stringValue = NSLocalizedString(@"usersettings", nil);
     [self.usernameTextfield.cell setPlaceholderString:NSLocalizedString(@"username", nil)];
-    if ([[AGCredentials credentials].userName length] > 0) {
-        [self.usernameTextfield setStringValue:[AGCredentials credentials].userName];
+    if ([AGCredentials credentials].userName.length) {
+        self.usernameTextfield.stringValue = [AGCredentials credentials].userName ?: @"";
     }
     [self.passwordTextfield.cell setPlaceholderString:NSLocalizedString(@"password", nil)];
     // Shows the Keychain unlock dialog.
-    if ([[AGCredentials credentials].password length] > 0) {
-        [self.passwordTextfield setStringValue:[AGCredentials credentials].password];
+    if ([AGCredentials credentials].password.length) {
+        self.passwordTextfield.stringValue = [AGCredentials credentials].password ?: @"";
     } else {
         NSUserNotification *notification = [[NSUserNotification alloc] init];
         notification.title = NSLocalizedString(@"enterpassword", nil);
@@ -175,7 +175,7 @@ static NSString *const kAGDropKey = @"kAGDropKey";
 - (IBAction)saveAction:(id)sender {
     [AGPreferences sharedInstance].baseURL = self.serverUrlTextfield.stringValue;
     [AGPreferences sharedInstance].remoteDirectoryPath = self.serverPathTextfield.stringValue;
-    if (self.usernameTextfield.stringValue.length > 0 && self.passwordTextfield.stringValue.length > 0) {
+    if (self.usernameTextfield.stringValue.length && self.passwordTextfield.stringValue.length) {
         [[AGCredentials credentials] setName:self.usernameTextfield.stringValue password:self.passwordTextfield.stringValue];
     }
 
