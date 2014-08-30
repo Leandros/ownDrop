@@ -141,6 +141,7 @@ static NSString *const kAGDropKey = @"kAGDropKey";
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     }
 
+    self.selfSignedCertsCheckbox.title = NSLocalizedString(@"allowselfsignedcerts", nil);
     self.selfSignedCertsCheckbox.state = [AGPreferences sharedInstance].allowSelfSignedSSLCerts ? NSOnState : NSOffState;
 }
 

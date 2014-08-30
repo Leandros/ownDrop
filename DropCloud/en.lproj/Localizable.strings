@@ -17,8 +17,8 @@
 "erroruploading" = "Uploading failed!";
 "errorsharing" = "Sharing failed!";
 "nobuseurl" = "No BaseURL entered!";
-"nobaseurlinfo" = "Please enter a base url in the settings";
-"enterpassword" = "Please enter your password!";
+"nobaseurlinfo" = "Please enter a base URL in the settings";
+"enterpassword" = "Please enter your password";
 
 // Settings
 "serversettings" = "Server Settings";
@@ -31,5 +31,5 @@
 
 // About
 "developedby" = "Developed by:";
-"abouttext" = "DropCloud is free software. It's released under the GPL v3. The source code is available on Github (";
+"abouttext" = "ownDrop is free software. It's released under the GPL v3. The source code is available on Github (";
 "checkforupdates" = "Check for Updates...";
