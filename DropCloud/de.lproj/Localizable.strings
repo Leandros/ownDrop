@@ -17,8 +17,8 @@
 "erroruploading" = "Hochladen fehlgeschlagen!";
 "errorsharing" = "Teilen fehlgeschlagen!";
 "nobuseurl" = "Keine Server URL eingegeben!";
-"nobaseurlinfo" = "Bitte geben sie eine server url ein";
-"enterpassword" = "Bitte geben sie ihr Passwort ein!";
+"nobaseurlinfo" = "Bitte geben sie eine Server URL ein";
+"enterpassword" = "Bitte geben sie ihr Passwort ein";
 
 // Settings
 "serversettings" = "Server Einstellungen";
@@ -31,5 +31,5 @@
 
 // About
 "developedby" = "Entwickelt von:";
-"abouttext" = "DropCloud ist freie software. Es ist unter der GPL v3 veröffentlicht. Der Quellcode steht auf Github ( ";
+"abouttext" = "ownDrop ist freie software. Es ist unter der GPL v3 veröffentlicht. Der Quellcode steht auf Github ( ";
 "checkforupdates" = "Suche nach Updates...";

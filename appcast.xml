@@ -4,10 +4,15 @@
         <title>ownDrop Changelog</title>
         <link>https://raw.githubusercontent.com/Leandros/ownDrop/master/appcast.xml</link>
         <item>
-            <title>Version 0.6.0</title>
-            <pubDate>Mon, 2 Jun 2014 18:30:00 +0200</pubDate>
+            <title>Version 0.7.0</title>
+            <pubDate>Sat, 30 Aug 2014 17:10:00 +0200</pubDate>
             <sparkle:releaseNotesLink>http://htmlpreview.github.io/?https://github.com/Leandros/ownDrop/blob/master/changelog.html</sparkle:releaseNotesLink>
-            <enclosure url="https://github.com/Leandros/ownDrop/releases/download/0.6.0/ownDrop-0.6.0.zip" sparkle:version="8" sparkle:shortVersionString="0.6.0" length="1130169" type="application/octet-stream" sparkle:dsaSignature="MCwCFGmzPdx5JvD9beu+AottPRqOPyy4AhQoR6Q1167yLi5Fy0Up3vz7+/yY1Q==" />
+            <enclosure url="https://github.com/Leandros/ownDrop/releases/download/0.7.0/ownDrop-0.7.0.zip" 
+                sparkle:version="9"
+                sparkle:shortVersionString="0.7.0"
+                length="1324434"
+                type="application/octet-stream"
+                sparkle:dsaSignature="MCwCFExU4+u5lcg9tAdvLCyu1jNgruVmAhQFZh/u4Bne69oeffZEW2Jj/a9NlA==" />
         </item>
     </channel>
 </rss>
