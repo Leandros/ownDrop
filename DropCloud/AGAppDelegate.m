@@ -13,6 +13,9 @@
 #import "NSAttributedString+Hyperlink.h"
 #import "AGLoadingStatusItemView.h"
 #import "AGPreferences.h"
+#import "CoreDataManager.h"
+#import "AGDrop.h"
+#import "NSManagedObject+ActiveRecord.h"
 
 @interface AGAppDelegate ()
 
@@ -20,10 +23,12 @@
 @property (nonatomic, strong) AGCloudCommunication *cloud;
 @property (nonatomic, strong) NSStatusItem *statusItem;
 @property (nonatomic, strong) AGLoadingStatusItemView *statusItemView;
+@property (nonatomic, strong) NSMutableArray *recentDrops;
 
 
 #pragma mark Main Window
 @property (weak) IBOutlet NSMenu *statusMenu;
+@property (weak) IBOutlet NSMenuItem *noRecentDrops;
 @property (weak) IBOutlet NSMenuItem *settingsMenuItem;
 @property (weak) IBOutlet NSMenuItem *aboutMenuItem;
 @property (weak) IBOutlet NSMenuItem *quitMenuItem;
@@ -56,12 +61,14 @@
 @end
 
 @implementation AGAppDelegate
+static NSString *const kAGDropKey = @"kAGDropKey";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Init.
 }
 
 - (void)awakeFromNib {
+    [self commonInit];
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:STATUS_ITEM_VIEW_WIDTH];
     self.statusItemView = [[AGLoadingStatusItemView alloc] initWithStatusItem:self.statusItem];
     self.statusItemView.menu = self.statusMenu;
@@ -85,7 +92,8 @@
     NSDictionary *attr = @{
             NSFontAttributeName : font
     };
-    NSMutableAttributedString *aboutString = [[NSMutableAttributedString alloc] initWithString:NSLocalizedString(@"abouttext", nil) attributes:attr];
+    NSMutableAttributedString *aboutString = [[NSMutableAttributedString alloc]
+            initWithString:NSLocalizedString(@"abouttext", nil) attributes:attr];
     [aboutString appendAttributedString:[NSAttributedString hyperlinkFromString:@"https://GitHub.com/Leandros/ownDrop" withURL:url attributes:attr]];
     [aboutString appendAttributedString:[[NSAttributedString alloc] initWithString:@")" attributes:attr]];
     self.aboutTextfield.attributedStringValue = aboutString;
@@ -97,6 +105,18 @@
     self.developedByLabel.attributedStringValue = [[NSAttributedString alloc] initWithString:NSLocalizedString(@"developedby", nil) attributes:boldAttr];
     [self.updatesButton setTitle:NSLocalizedString(@"checkforupdates", nil)];
 
+    if (self.recentDrops.count) {
+        [self.statusMenu removeItem:self.noRecentDrops];
+    }
+
+    NSInteger count = self.recentDrops.count;
+    NSInteger index = count;
+    for (AGDrop *drop in self.recentDrops) {
+        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:drop.fileName.lastPathComponent action:@selector(recentDropSelected:) keyEquivalent:@""];
+        [item setEnabled:YES];
+        [self.statusMenu insertItem:item atIndex:count - index];
+        index--;
+    }
     self.settingsMenuItem.title = NSLocalizedString(@"settings", nil);
     self.aboutMenuItem.title = NSLocalizedString(@"about", nil);
     self.quitMenuItem.title = NSLocalizedString(@"quit", nil);
@@ -122,6 +142,15 @@
     }
 
     self.selfSignedCertsCheckbox.state = [AGPreferences sharedInstance].allowSelfSignedSSLCerts ? NSOnState : NSOffState;
+}
+
+- (void)commonInit {
+    [CoreDataManager sharedManager].modelName = @"Model";
+
+    NSArray *drops = [AGDrop allWithOrder:[NSSortDescriptor sortDescriptorWithKey:@"createdDate" ascending:NO]];
+
+    NSUInteger length = drops.count < 5 ? drops.count : 5;
+    self.recentDrops = [[drops subarrayWithRange:NSMakeRange(0, length)] mutableCopy];
 }
 
 
@@ -163,6 +192,12 @@
     [self.window close];
 }
 
+- (void)recentDropSelected:(NSMenuItem *)item {
+    NSUInteger index = (NSUInteger) [self.statusMenu indexOfItem:item];
+    AGDrop *drop = self.recentDrops[index];
+    [self showDropNotification:drop uploaded:NO];
+}
+
 
 #pragma mark -
 #pragma mark File Upload -
@@ -179,15 +214,18 @@
         if (!uploadError) {
             [self.cloud shareFile:remoteFilePath completion:^(NSString *url, NSError *shareError) {
                 if (!shareError) {
-                    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
-                    [pasteboard clearContents];
-                    [pasteboard setString:url forType:NSStringPboardType];
+                    AGDrop *newDrop = [AGDrop create];
+                    newDrop.createdDate = [NSDate date];
+                    newDrop.fileName = fileName;
+                    newDrop.shareURL = url;
+                    [newDrop save];
 
-                    NSUserNotification *notification = [[NSUserNotification alloc] init];
-                    notification.title = [NSString stringWithFormat:NSLocalizedString(@"uploadcomplete", nil), fileName.lastPathComponent];
-                    notification.informativeText = NSLocalizedString(@"urlcopied", nil);
+                    [self.recentDrops addObject:newDrop];
+                    NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:newDrop.fileName.lastPathComponent action:@selector(recentDropSelected:) keyEquivalent:@""];
+                    [item setEnabled:YES];
+                    [self.statusMenu insertItem:item atIndex:0];
 
-                    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+                    [self showDropNotification:newDrop uploaded:YES];
                 } else {
                     NSLog(@"Share Error: %@", shareError);
 
@@ -208,5 +246,21 @@
             [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
         }
     }];
+}
+
+- (void)showDropNotification:(AGDrop *)drop uploaded:(BOOL)uploaded {
+    NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
+    [pasteboard clearContents];
+    [pasteboard setString:drop.shareURL forType:NSStringPboardType];
+
+    NSUserNotification *notification = [[NSUserNotification alloc] init];
+    if (uploaded) {
+        notification.title = [NSString stringWithFormat:NSLocalizedString(@"uploadcomplete", nil), drop.fileName.lastPathComponent];
+    } else {
+        notification.title = drop.fileName.lastPathComponent;
+    }
+    notification.informativeText = NSLocalizedString(@"urlcopied", nil);
+
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
 }
 @end

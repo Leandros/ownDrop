@@ -15,16 +15,22 @@ PODS:
   - AFNetworking/Reachability (2.2.4)
   - AFNetworking/Security (2.2.4)
   - AFNetworking/Serialization (2.2.4)
+  - ObjectiveRecord (HEAD based on 1.5.0):
+    - ObjectiveSugar
+  - ObjectiveSugar (1.1.0)
   - Ono (1.0.1)
   - Sparkle-pornel (1.6.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2)
+  - ObjectiveRecord (HEAD)
   - Ono (~> 1.0.0)
   - Sparkle-pornel (~> 1.6)
 
 SPEC CHECKSUMS:
   AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  ObjectiveRecord: 173527cdf923ee956f6b0a4430916534b54583f5
+  ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
   Ono: 56b64b266667f012bce9885f7764bf65b84f027a
   Sparkle-pornel: dfb419ba2135a0b7e9c686c566eeb4abb5af2df1
 

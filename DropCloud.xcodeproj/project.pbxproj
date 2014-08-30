@@ -18,6 +18,8 @@
 		0C217A5E1927D6E100329724 /* DropCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C217A5D1927D6E100329724 /* DropCloudTests.m */; };
 		0C217A691928C14C00329724 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A6B1928C14C00329724 /* Localizable.strings */; };
 		0C217A721928C18E00329724 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C217A711928C18E00329724 /* MainMenu.xib */; };
+		0CCFBF5719B206B300C99383 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CCFBF5519B206B300C99383 /* Model.xcdatamodeld */; };
+		0CCFBF5A19B2071900C99383 /* AGDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCFBF5919B2071900C99383 /* AGDrop.m */; };
 		0CEB85241938BD230052BDEC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB85231938BD230052BDEC /* Security.framework */; };
 		0CEB85261938BD2A0052BDEC /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEB85251938BD2A0052BDEC /* CoreServices.framework */; };
 		0CEB852919399EFB0052BDEC /* AGPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEB852819399EFB0052BDEC /* AGPreferences.m */; };
@@ -72,6 +74,9 @@
 		0C217A6F1928C16700329724 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0C217A701928C16700329724 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C217A711928C18E00329724 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		0CCFBF5619B206B300C99383 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		0CCFBF5819B2071900C99383 /* AGDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGDrop.h; sourceTree = "<group>"; };
+		0CCFBF5919B2071900C99383 /* AGDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGDrop.m; sourceTree = "<group>"; };
 		0CEB85231938BD230052BDEC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0CEB85251938BD2A0052BDEC /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		0CEB852719399EFB0052BDEC /* AGPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPreferences.h; sourceTree = "<group>"; };
@@ -182,6 +187,7 @@
 				0C217A711928C18E00329724 /* MainMenu.xib */,
 				0C217A4B1927D6E100329724 /* Images.xcassets */,
 				0C217A3A1927D6E100329724 /* Supporting Files */,
+				0CCFBF5419B206B300C99383 /* CoreData */,
 				5D97ADA03B095CDFDD7F02E5 /* Utils */,
 				5D97A4AD0665F8C681E8F909 /* CloudAPI */,
 				5D97AD61E9FECAB135D99846 /* CustomViews */,
@@ -218,6 +224,16 @@
 				0C217A5A1927D6E100329724 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CCFBF5419B206B300C99383 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0CCFBF5519B206B300C99383 /* Model.xcdatamodeld */,
+				0CCFBF5819B2071900C99383 /* AGDrop.h */,
+				0CCFBF5919B2071900C99383 /* AGDrop.m */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		5D97A4AD0665F8C681E8F909 /* CloudAPI */ = {
@@ -415,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CCFBF5A19B2071900C99383 /* AGDrop.m in Sources */,
 				0C217A471927D6E100329724 /* AGAppDelegate.m in Sources */,
 				0C217A401927D6E100329724 /* main.m in Sources */,
 				0CEB852919399EFB0052BDEC /* AGPreferences.m in Sources */,
@@ -426,6 +443,7 @@
 				5D97AD35D4C632D5492D9646 /* NSAttributedString+Hyperlink.m in Sources */,
 				5D97A317B53CE30592C673DD /* AGLoadingStatusItemView.m in Sources */,
 				5D97A4F52DA5543D781DDCE1 /* AGLoadingView.m in Sources */,
+				0CCFBF5719B206B300C99383 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +669,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0CCFBF5519B206B300C99383 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0CCFBF5619B206B300C99383 /* Model.xcdatamodel */,
+			);
+			currentVersion = 0CCFBF5619B206B300C99383 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0C217A281927D6E100329724 /* Project object */;
 }
