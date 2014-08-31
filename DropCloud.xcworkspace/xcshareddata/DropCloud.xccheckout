@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>2F1F12A6-5BBA-47C8-B09C-ABC183D00777</string>
+	<string>F6E3E33B-9FF9-4AC4-BCB6-FBA3FE9D21DC</string>
 	<key>IDESourceControlProjectName</key>
 	<string>DropCloud</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5F73378B-9B1E-4D93-A7B2-48552D49D55F</key>
-		<string>ssh://github.com/Leandros/DropCloud.git</string>
+		<key>B5B95C91-889D-4DA8-8B25-2D38FEEB9B0B</key>
+		<string>ssh://github.com/Leandros/ownDrop.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DropCloud.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5F73378B-9B1E-4D93-A7B2-48552D49D55F</key>
+		<key>B5B95C91-889D-4DA8-8B25-2D38FEEB9B0B</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/Leandros/DropCloud.git</string>
+	<string>ssh://github.com/Leandros/ownDrop.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5F73378B-9B1E-4D93-A7B2-48552D49D55F</string>
+	<string>B5B95C91-889D-4DA8-8B25-2D38FEEB9B0B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5F73378B-9B1E-4D93-A7B2-48552D49D55F</string>
+			<string>B5B95C91-889D-4DA8-8B25-2D38FEEB9B0B</string>
 			<key>IDESourceControlWCCName</key>
-			<string>DropCloud</string>
+			<string>ownDrop</string>
 		</dict>
 	</array>
 </dict>

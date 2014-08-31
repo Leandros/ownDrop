@@ -224,6 +224,11 @@
                     [self.recentDrops addObject:newDrop];
                     NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:newDrop.fileName.lastPathComponent action:@selector(recentDropSelected:) keyEquivalent:@""];
                     [item setEnabled:YES];
+					
+					if (self.recentDrops.count == 1 && [[[self.recentDrops objectAtIndex:0] title] isEqualToString:@"No recent drops"]) {
+						[self.recentDrops removeObjectAtIndex:0];
+					}
+					
                     [self.statusMenu insertItem:item atIndex:0];
                     if (self.recentDrops.count > 5) {
                         [self.recentDrops removeLastObject];
