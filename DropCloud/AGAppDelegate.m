@@ -225,6 +225,9 @@
                     NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:newDrop.fileName.lastPathComponent action:@selector(recentDropSelected:) keyEquivalent:@""];
                     [item setEnabled:YES];
                     [self.statusMenu insertItem:item atIndex:0];
+                    if (self.recentDrops.count > 5) {
+                        [self.statusMenu removeItemAtIndex:5];
+                    }
 
                     [self showDropNotification:newDrop uploaded:YES];
                 } else {
