@@ -226,6 +226,7 @@
                     [item setEnabled:YES];
                     [self.statusMenu insertItem:item atIndex:0];
                     if (self.recentDrops.count > 5) {
+                        [self.recentDrops removeLastObject];
                         [self.statusMenu removeItemAtIndex:5];
                     }
 
