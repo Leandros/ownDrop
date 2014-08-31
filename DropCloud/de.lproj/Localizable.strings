@@ -7,6 +7,7 @@
 */
 
 // Menu
+"norecentdrops" = "Keine hochgeladenen drops";
 "settings" = "Einstellungen";
 "about" = "Über";
 "quit" = "Schließen";
@@ -16,7 +17,6 @@
 "urlcopied" = "Der link wurde in die Zwischenablage kopiert";
 "erroruploading" = "Hochladen fehlgeschlagen!";
 "errorsharing" = "Teilen fehlgeschlagen!";
-"nobuseurl" = "Keine Server URL eingegeben!";
 "nobaseurlinfo" = "Bitte geben sie eine Server URL ein";
 "enterpassword" = "Bitte geben sie ihr Passwort ein";
 

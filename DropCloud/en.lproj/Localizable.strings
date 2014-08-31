@@ -7,6 +7,7 @@
 */
 
 // Menu
+"norecentdrops" = "No recent drops";
 "settings" = "Settings";
 "about" = "About";
 "quit" = "Quit";
@@ -16,7 +17,6 @@
 "urlcopied" = "The link has been copied to the clipboard";
 "erroruploading" = "Uploading failed!";
 "errorsharing" = "Sharing failed!";
-"nobuseurl" = "No BaseURL entered!";
 "nobaseurlinfo" = "Please enter a base URL in the settings";
 "enterpassword" = "Please enter your password";
 

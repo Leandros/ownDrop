@@ -106,6 +106,8 @@
 
     if (self.recentDrops.count) {
         [self.statusMenu removeItem:self.noRecentDrops];
+    } else {
+        self.noRecentDrops.title = NSLocalizedString(@"norecentdrops", nil);
     }
 
     NSInteger count = self.recentDrops.count;
