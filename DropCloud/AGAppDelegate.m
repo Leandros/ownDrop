@@ -80,8 +80,8 @@
     self.cloud.baseUrl = [AGPreferences sharedInstance].baseURL;
     self.cloud.remoteDirectoryPath = [AGPreferences sharedInstance].remoteDirectoryPath;
 
-    self.serverUrlTextfield.stringValue = self.cloud.baseUrl ?: @"";
-    self.serverPathTextfield.stringValue = self.cloud.remoteDirectoryPath ?: @"";
+    self.serverUrlTextfield.stringValue = self.cloud.baseUrl ? : @"";
+    self.serverPathTextfield.stringValue = self.cloud.remoteDirectoryPath ? : @"";
 
     [self.aboutTextfield setAllowsEditingTextAttributes:YES];
     [self.aboutTextfield setSelectable:YES];
@@ -128,12 +128,12 @@
     self.userSettingsLabel.stringValue = NSLocalizedString(@"usersettings", nil);
     [self.usernameTextfield.cell setPlaceholderString:NSLocalizedString(@"username", nil)];
     if ([AGCredentials credentials].userName.length) {
-        self.usernameTextfield.stringValue = [AGCredentials credentials].userName ?: @"";
+        self.usernameTextfield.stringValue = [AGCredentials credentials].userName ? : @"";
     }
     [self.passwordTextfield.cell setPlaceholderString:NSLocalizedString(@"password", nil)];
     // Shows the Keychain unlock dialog.
     if ([AGCredentials credentials].password.length) {
-        self.passwordTextfield.stringValue = [AGCredentials credentials].password ?: @"";
+        self.passwordTextfield.stringValue = [AGCredentials credentials].password ? : @"";
     } else {
         NSUserNotification *notification = [[NSUserNotification alloc] init];
         notification.title = NSLocalizedString(@"enterpassword", nil);
@@ -224,6 +224,7 @@
                     [self.recentDrops addObject:newDrop];
                     NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:newDrop.fileName.lastPathComponent action:@selector(recentDropSelected:) keyEquivalent:@""];
                     [item setEnabled:YES];
+                    [self.statusMenu removeItem:self.noRecentDrops];
                     [self.statusMenu insertItem:item atIndex:0];
                     if (self.recentDrops.count > 5) {
                         [self.recentDrops removeLastObject];
