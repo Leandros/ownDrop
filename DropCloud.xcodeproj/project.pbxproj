@@ -64,7 +64,7 @@
 		0C217A451927D6E100329724 /* AGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
 		0C217A461927D6E100329724 /* AGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
 		0C217A4B1927D6E100329724 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0C217A511927D6E100329724 /* DropCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DropCloudTests.xctest; path = ownDropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C217A511927D6E100329724 /* ownDropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ownDropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C217A521927D6E100329724 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0C217A591927D6E100329724 /* DropCloudTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropCloudTests-Info.plist"; sourceTree = "<group>"; };
 		0C217A5B1927D6E100329724 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				0C217A301927D6E100329724 /* ownDrop.app */,
-				0C217A511927D6E100329724 /* DropCloudTests.xctest */,
+				0C217A511927D6E100329724 /* ownDropTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -326,7 +326,7 @@
 			);
 			name = ownDropTests;
 			productName = DropCloudTests;
-			productReference = 0C217A511927D6E100329724 /* DropCloudTests.xctest */;
+			productReference = 0C217A511927D6E100329724 /* ownDropTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
