@@ -16,6 +16,8 @@
 
 @implementation AGStatusItemView
 
+@synthesize menu = _menu;
+
 #pragma mark -
 #pragma mark Initialization -
 
@@ -136,7 +138,7 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [self.statusItem drawStatusBarBackgroundInRect:dirtyRect withHighlight:self.isHighlighted];
 
-    NSImage *icon = self.isHighlighted ? self.highlightImage : self.image;
+    NSImage *icon = self.isHighlighted || self.isDarkMode ? self.highlightImage : self.image;
     NSSize iconSize = [icon size];
     NSRect bounds = self.bounds;
     CGFloat iconX = roundf((float) ((NSWidth(bounds) - iconSize.width) / 2));

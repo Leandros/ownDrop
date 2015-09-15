@@ -609,7 +609,7 @@
 		0C217A651927D6E100329724 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DropCloud.app/Contents/MacOS/DropCloud";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ownDrop.app/Contents/MacOS/ownDrop";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -631,7 +631,7 @@
 		0C217A661927D6E100329724 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DropCloud.app/Contents/MacOS/DropCloud";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ownDrop.app/Contents/MacOS/ownDrop";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",

@@ -1,11 +1,11 @@
 PODS:
   - AFNetworking (2.4.1):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-    - AFNetworking/UIKit
+    - AFNetworking/NSURLConnection (= 2.4.1)
+    - AFNetworking/NSURLSession (= 2.4.1)
+    - AFNetworking/Reachability (= 2.4.1)
+    - AFNetworking/Security (= 2.4.1)
+    - AFNetworking/Serialization (= 2.4.1)
+    - AFNetworking/UIKit (= 2.4.1)
   - AFNetworking/NSURLConnection (2.4.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
@@ -30,10 +30,10 @@ DEPENDENCIES:
   - Sparkle (~> 1)
 
 SPEC CHECKSUMS:
-  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
-  ObjectiveRecord: 173527cdf923ee956f6b0a4430916534b54583f5
-  ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
-  Ono: 56b64b266667f012bce9885f7764bf65b84f027a
-  Sparkle: 5eb20bb37ca21e471dab8417dee880198d905327
+  AFNetworking: 41d45d2c14219af0fa5addf3cfd433a002c13c9f
+  ObjectiveRecord: f290d17272e476b3c881300910e98284200c54b6
+  ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
+  Ono: 5914aa3dbb6de821fc2ac3b687f3be536ed36615
+  Sparkle: 3adb45d38bcdf80caf505f2b4cd693031db70835
 
-COCOAPODS: 0.34.1
+COCOAPODS: 0.38.2

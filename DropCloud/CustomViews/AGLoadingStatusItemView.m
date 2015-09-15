@@ -33,10 +33,11 @@
     if (self.isLoading) {
         if (!self.loadingView) {
             self.loadingView = [[AGLoadingView alloc] initWithFrame:NSMakeRect(0.0f, 0.0f, 18.0f, 18.0f)];
+            self.loadingView.isDarkMode = true;
         }
         [self.loadingView setProgress:self.progress];
         icon = [self imageFromView:self.loadingView];
-    } else if (self.isHighlighted) {
+    } else if (self.isHighlighted || self.isDarkMode) {
         icon = self.highlightImage;
     } else {
         icon = self.image;
