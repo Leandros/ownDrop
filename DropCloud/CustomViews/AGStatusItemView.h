@@ -17,6 +17,7 @@ typedef NS_ENUM(NSUInteger, AGStatusItemEvent) {
 @property (nonatomic, strong) NSImage *image;
 @property (nonatomic, strong) NSImage *highlightImage;
 @property (nonatomic, assign, readonly) BOOL isHighlighted;
+@property (nonatomic) BOOL isDarkMode;
 
 - (id)initWithStatusItem:(NSStatusItem *)statusItem;
 - (void)addObserver:(SEL)observer withTarget:(id)target forEvent:(AGStatusItemEvent)event;

@@ -9,5 +9,6 @@
 @interface AGLoadingView : NSView
 
 @property (nonatomic, assign) float progress;
+@property (nonatomic) BOOL isDarkMode;
 
 @end

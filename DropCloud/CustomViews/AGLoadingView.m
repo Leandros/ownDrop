@@ -20,7 +20,8 @@
     [emptyDropPath lineToPoint:NSMakePoint(9, 16)];
     [emptyDropPath lineToPoint:NSMakePoint(9, 16)];
     [emptyDropPath closePath];
-    [NSColor.blackColor setStroke];
+    if (self.isDarkMode) [NSColor.whiteColor setStroke];
+    else [NSColor.blackColor setStroke];
     [emptyDropPath setLineWidth:1];
     [emptyDropPath stroke];
 
@@ -168,10 +169,12 @@
         [bezier2Path lineToPoint: NSMakePoint(9.29, 15.46)];
         [bezier2Path closePath];
     }
-
-    [NSColor.blackColor setFill];
+    
+    if (self.isDarkMode) [NSColor.whiteColor setFill];
+    else [NSColor.blackColor setFill];
     [bezier2Path fill];
-    [NSColor.blackColor setStroke];
+    if (self.isDarkMode) [NSColor.whiteColor setStroke];
+    else [NSColor.blackColor setStroke];
     [bezier2Path setLineWidth:1];
     [bezier2Path stroke];
 }

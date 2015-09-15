@@ -71,6 +71,11 @@
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:STATUS_ITEM_VIEW_WIDTH];
     self.statusItemView = [[AGLoadingStatusItemView alloc] initWithStatusItem:self.statusItem];
     self.statusItemView.menu = self.statusMenu;
+    
+    NSString *osxMode = [[NSUserDefaults standardUserDefaults] stringForKey:@"AppleInterfaceStyle"];
+    if (osxMode == nil) self.statusItemView.isDarkMode = false;
+    else self.statusItemView.isDarkMode = true;
+    
     self.statusItemView.image = [NSImage imageNamed:@"menubar_icon"];
     self.statusItemView.highlightImage = [NSImage imageNamed:@"menubar_icon_inverse"];
     [self.statusItemView addObserver:@selector(fileDropped:) withTarget:self forEvent:AGStatusItemEventFileDropped];
