@@ -16,6 +16,8 @@
 
 @implementation AGStatusItemView
 
+@synthesize menu = _menu;
+
 #pragma mark -
 #pragma mark Initialization -
 
